@@ -1,0 +1,707 @@
+/* HAEON — TASTE editorial layout (only taste.html) */
+body[data-page="taste"] { background:#fff; color:#151515; }
+body[data-page="taste"] .taste-v2-main { padding-top:var(--header-height); }
+body[data-page="taste"] .taste-v2-hero {height: min(64vw, 790px);min-height:460px; position:relative; margin:0; overflow:hidden;}
+body[data-page="taste"] .taste-v2-hero .hero-media {position:absolute;inset:0;overflow:hidden;}
+body[data-page="taste"] .taste-v2-hero .hero-media img {width:100%;height:100%;object-fit:cover;object-position:center;}
+body[data-page="taste"] .taste-v2-hero .hero-shade {position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent 75%);pointer-events:none;}
+body[data-page="taste"] .taste-v2-hero__text {position:absolute;top:24%;left:50%;transform:translateX(-50%);z-index:2;color:white;}
+body[data-page="taste"] .taste-v2-hero__text h1 {writing-mode:vertical-rl;text-orientation:upright;white-space:nowrap;letter-spacing:.33em;line-height:2.15;font-family:'Gowun Batang',var(--font-serif);font-size:clamp(15px,1.7vw,24px);font-weight:700;text-shadow:0 2px 7px rgba(0,0,0,.38)}
+body[data-page="taste"] .taste-v2-scroll {position:absolute;bottom:38px;left:50%;transform:translateX(-50%);color:#fff;z-index:3;font-size:10px;letter-spacing:.18em;display:flex;flex-direction:column;align-items:center;gap:12px;white-space:nowrap;text-shadow:0 1px 4px #222;}
+body[data-page="taste"] .taste-v2-scroll span {font-size:26px;line-height:1;}
+body[data-page="taste"] .taste-v2-duo {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;}
+body[data-page="taste"] .taste-v2-pane {min-width:0;min-height:660px;}
+body[data-page="taste"] .taste-v2-pane--paper {background:#fff;}
+body[data-page="taste"] .taste-v2-pane--grey {background:#878787;}
+body[data-page="taste"] .taste-v2-empty {min-height:660px;}
+body[data-page="taste"] .taste-v2-copy {width:min(75%,560px);margin:0 auto;}
+body[data-page="taste"] .taste-v2-copy h2 {font-family:'Gowun Batang',var(--font-serif);font-weight:700;font-size:clamp(23px,2vw,34px);line-height:1.45;letter-spacing:-.035em;word-break:keep-all;}
+body[data-page="taste"] .taste-v2-rule {display:block;width:1px;height:110px;background:#333;margin:25px 0 56px;}
+body[data-page="taste"] .taste-v2-profile__story,body[data-page="taste"] .taste-v2-notes__story {display:flex;align-items:center;padding:75px 0;}
+body[data-page="taste"] .taste-v2-profile__story p {font-family:'Gowun Batang',var(--font-serif);font-size:clamp(13px,1vw,17px);line-height:2;letter-spacing:-.02em;margin:0 0 22px;color:#222;}
+body[data-page="taste"] .taste-v2-profile__story p.taste-v2-disclaimer {font-family:var(--font-sans);font-size:11px;line-height:1.7;margin:22px 0 0;color:#555;}
+body[data-page="taste"] .taste-v2-profile__ratings {display:flex;align-items:center;justify-content:center;padding:70px 50px;}
+body[data-page="taste"] .taste-v2-ratings {width:min(440px,95%);display:grid;gap:22px;}
+body[data-page="taste"] .taste-v2-score {display:flex;justify-content:space-between;align-items:center;gap:16px;color:#fff;}
+body[data-page="taste"] .taste-v2-score>span:first-child {display:flex;align-items:baseline;gap:8px;font-family:'Gowun Batang',var(--font-serif);font-size:15px;white-space:nowrap;}
+body[data-page="taste"] .taste-v2-score small {font-family:var(--font-latin),serif;font-size:12px;letter-spacing:.025em;opacity:.9;}
+body[data-page="taste"] .taste-v2-score__dots {display:flex;gap:13px;align-items:center;}
+body[data-page="taste"] .taste-v2-score__dots i {display:block;width:9px;height:9px;border:1px solid #fff;border-radius:50%;}
+body[data-page="taste"] .taste-v2-score__dots i.active {background:#fff;}
+body[data-page="taste"] .taste-v2-notes__story {min-height:750px;}
+body[data-page="taste"] .taste-v2-scenes {display:grid;gap:38px;margin:0;}
+body[data-page="taste"] .taste-v2-scenes>div {display:grid;grid-template-columns:65px minmax(0,1fr);gap:15px;}
+body[data-page="taste"] .taste-v2-scenes dt {font-family:'Gowun Batang',var(--font-serif);font-size:18px;font-weight:700;letter-spacing:.09em;white-space:nowrap;}
+body[data-page="taste"] .taste-v2-scenes dd {margin:0;font-family:'Gowun Batang',var(--font-serif);font-size:14px;line-height:1.9;word-break:keep-all;color:#303030;}
+body[data-page="taste"] .taste-v2-serving {min-height:190px;padding:54px max(5%,calc((100% - 1260px)/2));display:flex;align-items:center;gap:40px;background:#f3f3f3;}
+body[data-page="taste"] .taste-v2-serving h2 {font-family:'Gowun Batang',var(--font-serif);font-weight:700;font-size:clamp(20px,1.8vw,26px);white-space:nowrap;letter-spacing:-.04em;}
+body[data-page="taste"] .taste-v2-serving__line {height:1px;background:#222;flex:1;min-width:28px;}
+body[data-page="taste"] .taste-v2-serving__setting {display:flex;flex-direction:column;align-items:center;text-align:center;flex:0 0 auto;min-width:95px;color:#1b1b1b;}
+body[data-page="taste"] .taste-v2-serving__setting i {display:block;width:38px;height:38px;border-radius:50%;background:#e8e8e8;margin-bottom:12px;}
+body[data-page="taste"] .taste-v2-serving__setting strong {font-family:'Gowun Batang',var(--font-serif);font-size:16px;font-weight:700;line-height:1.4;}
+body[data-page="taste"] .taste-v2-serving__setting span {font-size:12px;line-height:1.6;}
+body[data-page="taste"] .taste-v2-table__text {display:flex;align-items:center;padding:84px 0;}
+body[data-page="taste"] .taste-v2-table__text .taste-v2-copy{width:min(72%,560px);}
+body[data-page="taste"] .taste-v2-table__text h2 {margin-bottom:95px;}
+body[data-page="taste"] .taste-v2-food-list {display:grid;}
+body[data-page="taste"] .taste-v2-food {display:grid;grid-template-columns:48px minmax(0,1fr);gap:28px;padding:24px 0 27px;border-bottom:1px solid #262626;}
+body[data-page="taste"] .taste-v2-food:last-child {border-bottom:none;}
+body[data-page="taste"] .taste-v2-food__name {font-family:'Gowun Batang',var(--font-serif);font-size:21px;line-height:1.25;letter-spacing:.07em;word-break:break-all;overflow-wrap:anywhere;width:1.25em;font-weight:700;}
+body[data-page="taste"] .taste-v2-food__body h4 {font-family:'Gowun Batang',var(--font-serif);font-size:16px;line-height:1.65;font-weight:700;letter-spacing:-.01em;}
+body[data-page="taste"] .taste-v2-food__body p {font-family:'Gowun Batang',var(--font-serif);font-size:13px;line-height:1.9;color:#404040;margin:8px 0 18px;word-break:keep-all;}
+body[data-page="taste"] .taste-v2-food__tip {padding:7px 0;border:0;background:transparent;display:inline-flex;align-items:center;gap:10px;min-height:42px;color:#161616;font-family:var(--font-sans);font-size:12px;letter-spacing:.015em;cursor:pointer;text-align:left;}
+body[data-page="taste"] .taste-v2-food__tip:hover span:first-child,body[data-page="taste"] .taste-v2-food__tip:focus-visible span:first-child{text-decoration:underline;text-underline-offset:4px;}
+body[data-page="taste"] .taste-v2-food__tip span:last-child {font-size:16px;}
+body[data-page="taste"] .taste-v2-table--last .taste-v2-table__text {padding-bottom:180px;}
+body[data-page="taste"] .taste-v2-table--last .taste-v2-food:first-child{padding-top:4px;}
+/* Off-canvas guide — opens inside the site rather than a separate window. */
+body[data-page="taste"] .taste-v2-drawer[hidden] {display:none;}
+body[data-page="taste"] .taste-v2-drawer {position:fixed;inset:0;z-index:110;pointer-events:none;}
+body[data-page="taste"] .taste-v2-drawer.is-open {pointer-events:auto;}
+body[data-page="taste"] .taste-v2-drawer__backdrop {position:absolute;inset:0;background:rgba(8,18,26,.46);opacity:0;transition:opacity .35s ease;}
+body[data-page="taste"] .taste-v2-drawer__panel {position:absolute;top:0;right:0;width:min(490px,100%);height:100%;display:flex;flex-direction:column;background:#f7f4ec;transform:translateX(103%);box-shadow:-10px 0 50px rgba(0,0,0,.16);transition:transform .35s cubic-bezier(.24,.72,.2,1);outline:none;}
+/* LEFT SIDE for shabu-shabu, grilled meat and chrysanthemum pancake. */
+body[data-page="taste"] .taste-v2-drawer[data-side="left"] .taste-v2-drawer__panel {
+  left: 0;
+  right: auto;
+  transform: translateX(-103%);
+  box-shadow: 10px 0 50px rgba(0,0,0,.16);
+}
+body[data-page="taste"] .taste-v2-drawer[data-side="left"].is-open .taste-v2-drawer__panel {
+  transform: translateX(0);
+}
+body[data-page="taste"] .taste-v2-drawer.is-open .taste-v2-drawer__backdrop {opacity:1;}
+body[data-page="taste"] .taste-v2-drawer.is-open .taste-v2-drawer__panel {transform:translateX(0);}
+body[data-page="taste"] .taste-v2-drawer__head {display:flex;align-items:center;justify-content:space-between;padding:28px 32px;border-bottom:1px solid #d7d0c0;}
+body[data-page="taste"] .taste-v2-drawer__head p {font-family:var(--font-latin),serif;font-size:13px;letter-spacing:.12em;}
+body[data-page="taste"] .taste-v2-drawer__close {display:grid;place-items:center;width:44px;height:44px;border:1px solid #9e978c;border-radius:50%;font-size:30px;line-height:1;color:#222;cursor:pointer;}
+body[data-page="taste"] .taste-v2-drawer__body {flex:1;overflow-y:auto;padding:52px 38px;overscroll-behavior:contain;}
+body[data-page="taste"] .taste-v2-drawer__tag {font-size:12px;letter-spacing:.1em;color:#795f3e;margin-bottom:24px;}
+body[data-page="taste"] .taste-v2-drawer__body h2 {font-family:'Gowun Batang',var(--font-serif);font-weight:700;font-size:35px;margin:0;line-height:1.5;}
+body[data-page="taste"] .taste-v2-drawer__line {width:1px;height:76px;background:#756f68;margin:28px 0;}
+body[data-page="taste"] .taste-v2-drawer__body h3 {font-family:'Gowun Batang',var(--font-serif);font-weight:700;font-size:19px;line-height:1.6;margin-bottom:14px;}
+body[data-page="taste"] .taste-v2-drawer__body #taste-v2-drawer-content p {font-family:'Gowun Batang',var(--font-serif);font-size:16px;line-height:2.05;margin-bottom:22px;word-break:keep-all;color:#343434;}
+body[data-page="taste"] .taste-v2-drawer__foot {padding:24px 32px;border-top:1px solid #d7d0c0;color:#72675d;font-size:11px;}
+@media (max-width:1100px){
+ body[data-page="taste"] .taste-v2-pane {min-height:600px;}
+ body[data-page="taste"] .taste-v2-copy {width:82%;}
+ body[data-page="taste"] .taste-v2-food__name{font-size:19px;}
+ body[data-page="taste"] .taste-v2-table__text .taste-v2-copy{width:82%;}
+ body[data-page="taste"] .taste-v2-scenes dd br {display:none;}
+ body[data-page="taste"] .taste-v2-serving{gap:22px;}
+}
+@media (max-width:767px){
+ body[data-page="taste"] .taste-v2-hero {height:63svh;min-height:430px;max-height:690px;}
+ body[data-page="taste"] .taste-v2-hero__text{top:23%;}
+ body[data-page="taste"] .taste-v2-hero__text h1{font-size:17px;}
+ body[data-page="taste"] .taste-v2-duo{grid-template-columns:1fr;}
+ body[data-page="taste"] .taste-v2-pane{min-height:0;}
+ body[data-page="taste"] .taste-v2-profile__story,body[data-page="taste"] .taste-v2-notes__story{padding:80px 0;}
+ body[data-page="taste"] .taste-v2-profile__ratings{padding:72px 24px;}
+ body[data-page="taste"] .taste-v2-profile .taste-v2-profile__ratings{min-height:390px;}
+ body[data-page="taste"] .taste-v2-profile .taste-v2-profile__story{min-height:540px;}
+ body[data-page="taste"] .taste-v2-empty{min-height:320px;}
+ body[data-page="taste"] .taste-v2-notes__story{min-height:570px;}
+ body[data-page="taste"] .taste-v2-notes .taste-v2-empty{order:1;}
+ body[data-page="taste"] .taste-v2-notes__story{order:0;}
+ body[data-page="taste"] .taste-v2-serving{flex-wrap:wrap;gap:18px 24px;padding:42px 7%;justify-content:center;}
+ body[data-page="taste"] .taste-v2-serving h2{flex:1 0 100%;text-align:center;font-size:22px;}
+ body[data-page="taste"] .taste-v2-serving__line{flex:1 0 100%;}
+ body[data-page="taste"] .taste-v2-table__text{padding:75px 0;}
+ body[data-page="taste"] .taste-v2-table__text h2{margin-bottom:44px;}
+ body[data-page="taste"] .taste-v2-table .taste-v2-empty{min-height:330px;}
+ body[data-page="taste"] .taste-v2-table--last .taste-v2-empty{order:1;}
+ body[data-page="taste"] .taste-v2-table--last .taste-v2-table__text{order:0;padding-bottom:170px;}
+}
+@media (max-width:420px){
+ body[data-page="taste"] .taste-v2-copy, body[data-page="taste"] .taste-v2-table__text .taste-v2-copy{width:calc(100% - 48px);}
+ body[data-page="taste"] .taste-v2-copy h2{font-size:24px;}
+ body[data-page="taste"] .taste-v2-profile__story p{font-size:14px;}
+ body[data-page="taste"] .taste-v2-wide{display:none;}
+ body[data-page="taste"] .taste-v2-score>span:first-child{font-size:13px;}
+ body[data-page="taste"] .taste-v2-score__dots{gap:10px;}
+ body[data-page="taste"] .taste-v2-score__dots i{width:8px;height:8px;}
+ body[data-page="taste"] .taste-v2-food{grid-template-columns:30px minmax(0,1fr);gap:19px;}
+ body[data-page="taste"] .taste-v2-food__name{font-size:17px;}
+ body[data-page="taste"] .taste-v2-scenes>div{grid-template-columns:50px minmax(0,1fr);gap:12px;}
+ body[data-page="taste"] .taste-v2-scenes dt{font-size:16px;}
+ body[data-page="taste"] .taste-v2-scenes dd{font-size:13px;}
+ body[data-page="taste"] .taste-v2-drawer__head{padding:19px 22px;}
+ body[data-page="taste"] .taste-v2-drawer__body{padding:34px 27px;}
+ body[data-page="taste"] .taste-v2-drawer__body h2{font-size:30px;}
+}
+@media(prefers-reduced-motion:reduce){body[data-page="taste"] .taste-v2-drawer__panel,body[data-page="taste"] .taste-v2-drawer__backdrop{transition:none;}}
+
+/* TASTE visual composition — 2026-10-16: original score panel unchanged. */
+body[data-page="taste"] .taste-v2-diagram {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+body[data-page="taste"] .taste-v2-diagram > img {
+  display:block;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  mix-blend-mode:normal;
+}
+
+/* Photo stages, same grey background as the reference. */
+body[data-page="taste"] .taste-v2-photo-stage {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+body[data-page="taste"] .taste-v2-photo {
+  position:absolute;
+  z-index:1;
+  margin:0;
+  padding:clamp(5px,.55vw,9px);
+  background:#ffffff;
+  box-shadow:0 7px 24px rgba(0,0,0,.08);
+  aspect-ratio:1.75;
+  transition:transform .35s ease;
+}
+body[data-page="taste"] .taste-v2-photo img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+body[data-page="taste"] .taste-v2-photo:hover {transform:translateY(-4px);}
+body[data-page="taste"] .taste-v2-photo--yukhoe {width:47%;top:24%;left:14%;}
+body[data-page="taste"] .taste-v2-photo--fish {width:47%;top:54%;right:11%;}
+body[data-page="taste"] .taste-v2-photo--shabu {width:42%;top:10%;left:14%;}
+body[data-page="taste"] .taste-v2-photo--grill {width:45%;top:34%;right:12%;}
+body[data-page="taste"] .taste-v2-photo--flower {width:42%;top:54%;left:18%;}
+
+body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage {min-height:700px;}
+
+/* Pairing miniatures stay beside the corresponding copy, never inside the buttons. */
+body[data-page="taste"] .taste-v2-food {
+  grid-template-columns:48px minmax(0,1fr) clamp(55px,6vw,100px);
+  column-gap:clamp(12px,1.7vw,26px);
+  align-items:center;
+}
+body[data-page="taste"] .taste-v2-food__name {align-self:start;}
+body[data-page="taste"] .taste-v2-food__illustration {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1.18;
+  object-fit:contain;
+  align-self:center;
+  justify-self:center;
+}
+body[data-page="taste"] .taste-v2-serving {background:#fbf7ed;}
+body[data-page="taste"] .taste-v2-serving__setting i {
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  color:#373737;
+  margin-bottom:9px;
+}
+body[data-page="taste"] .taste-v2-serving__setting i svg {width:32px;height:32px;}
+@media (max-width:1100px) {
+  body[data-page="taste"] .taste-v2-diagram {padding:24px;}
+  body[data-page="taste"] .taste-v2-food {grid-template-columns:34px minmax(0,1fr) 65px;column-gap:13px;}
+}
+@media (max-width:767px) {
+  body[data-page="taste"] .taste-v2-diagram {min-height:350px;padding:24px 20px;}
+  body[data-page="taste"] .taste-v2-diagram > img {width:min(95%,580px);max-height:320px;}
+  body[data-page="taste"] .taste-v2-photo-stage {min-height:clamp(390px,110vw,520px) !important;}
+  body[data-page="taste"] .taste-v2-photo {padding:6px;}
+  body[data-page="taste"] .taste-v2-photo--yukhoe {top:17%;left:10%;width:54%;}
+  body[data-page="taste"] .taste-v2-photo--fish {top:52%;right:10%;width:54%;}
+  body[data-page="taste"] .taste-v2-photo--shabu {top:8%;left:9%;width:52%;}
+  body[data-page="taste"] .taste-v2-photo--grill {top:36%;right:9%;width:53%;}
+  body[data-page="taste"] .taste-v2-photo--flower {top:62%;left:13%;width:51%;}
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage {min-height:520px !important;}
+  body[data-page="taste"] .taste-v2-food {grid-template-columns:36px minmax(0,1fr) 76px;column-gap:16px;}
+}
+@media (max-width:420px) {
+  body[data-page="taste"] .taste-v2-food {grid-template-columns:28px minmax(0,1fr) 66px;column-gap:12px;}
+  body[data-page="taste"] .taste-v2-food__illustration {aspect-ratio:1;}
+  body[data-page="taste"] .taste-v2-food__body p {font-size:12px;line-height:1.8;}
+  body[data-page="taste"] .taste-v2-food__body h4 {font-size:14px;}
+  body[data-page="taste"] .taste-v2-food__tip {font-size:11px;}
+  body[data-page="taste"] .taste-v2-photo-stage:not(.taste-v2-photo-stage--last) {min-height:390px !important;}
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-page="taste"] .taste-v2-photo {transition:none;}
+}
+
+
+/* HAEON TASTE — updated serving icons and full-stage pairing images. */
+body[data-page="taste"] .taste-v2-serving__setting .taste-v2-serving__icon {
+  width: 56px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 7px;
+  flex: 0 0 auto;
+}
+body[data-page="taste"] .taste-v2-serving__icon img {
+  display: block;
+  width: auto;
+  height: 43px;
+  max-width: 100%;
+  object-fit: contain;
+}
+/* Both pairing-screen images are 1920 x 2160 (8:9).
+   Size the photo panels from the image ratio instead of cropping
+   portrait photographs into a shorter two-column panel. */
+body[data-page="taste"] .taste-v2-table .taste-v2-photo-stage {
+  aspect-ratio: 8 / 9;
+  min-height: 0;
+}
+body[data-page="taste"] .taste-v2-photo-stage__image {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+@media(max-width:767px){
+  body[data-page="taste"] .taste-v2-serving__setting .taste-v2-serving__icon {height: 46px;}
+  body[data-page="taste"] .taste-v2-serving__icon img {height: 40px;}
+}
+
+/* Override old fixed-height photo-stage rules on desktop and mobile. */
+body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage {
+  min-height: 0;
+}
+@media (max-width:767px) {
+  body[data-page="taste"] .taste-v2-table .taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-photo-stage:not(.taste-v2-photo-stage--last) {
+    min-height: 0 !important;
+    height: auto;
+    aspect-ratio: 8 / 9;
+  }
+}
+
+
+/* 2026-10-16 — TASTE title background replaced with user-supplied sunset pairing image. */
+body[data-page="taste"] .taste-v2-hero .hero-media img{object-position:center center;}
+body[data-page="taste"] .taste-v2-hero .hero-shade{background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.12) 58%,rgba(0,0,0,.18));}
+
+
+/* HAEON — TASTE photographic ratings & diagram panels from user reference. */
+body[data-page="taste"] .taste-v2-hero{height:auto;min-height:0;aspect-ratio:1920/1000;}
+body[data-page="taste"] .taste-v2-hero .hero-media img{object-fit:cover;object-position:center 48%;}
+body[data-page="taste"] .taste-v2-profile > .taste-v2-pane,
+body[data-page="taste"] .taste-v2-notes > .taste-v2-pane{min-height:0;aspect-ratio:8/9;}
+body[data-page="taste"] .taste-v2-profile__ratings{
+  background:#b69d7b url('../assets/images/taste/plan_taste.png') center/cover no-repeat;
+}
+body[data-page="taste"] .taste-v2-diagram{padding:0;background-color:#ad7f5a;}
+body[data-page="taste"] .taste-v2-diagram > img{
+  width:100%;height:100%;max-height:none;object-fit:cover;object-position:center;
+}
+@media(max-width:767px){
+  body[data-page="taste"] .taste-v2-hero{height:auto;min-height:0;max-height:none;aspect-ratio:16/9;}
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane{aspect-ratio:auto;min-height:0;}
+  body[data-page="taste"] .taste-v2-profile__ratings,
+  body[data-page="taste"] .taste-v2-diagram{aspect-ratio:8/9;min-height:0!important;}
+  body[data-page="taste"] .taste-v2-diagram{padding:0;}
+  body[data-page="taste"] .taste-v2-diagram > img{width:100%;height:100%;max-height:none;}
+}
+@media(max-width:420px){
+  body[data-page="taste"] .taste-v2-hero{min-height:250px;}
+}
+/* Keep the 16:9 desktop hero from determining a wider-than-viewport mobile width. */
+body[data-page="taste"] .taste-v2-hero{width:100%;}
+@media(max-width:767px){
+  body[data-page="taste"] .taste-v2-hero{width:100%;height:clamp(250px,56vw,380px);min-height:0;max-height:none;aspect-ratio:auto;}
+}
+
+/* ============================================================
+   TASTE | Responsive content / full-image fit — 2026-10-16
+   Keep all photographic content visible and prevent text panels
+   from inheriting shorter image-only heights at narrow widths.
+   ============================================================ */
+body[data-page="taste"] .taste-v2-main,
+body[data-page="taste"] .taste-v2-duo,
+body[data-page="taste"] .taste-v2-pane,
+body[data-page="taste"] .taste-v2-copy,
+body[data-page="taste"] .taste-v2-food__body { min-width:0; }
+body[data-page="taste"] .taste-v2-hero {max-width:100%;}
+body[data-page="taste"] .taste-v2-hero .hero-media img {display:block;}
+
+/* Desktop: the editorial text may set the row height; images must
+   follow the row without cropping when their 8:9 space grows. */
+@media (min-width:1200px) {
+  body[data-page="taste"] .taste-v2-duo {align-items:stretch;}
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane {aspect-ratio:auto;}
+  body[data-page="taste"] .taste-v2-profile__ratings,
+  body[data-page="taste"] .taste-v2-diagram {min-height:calc(100vw * 9 / 16);}
+  body[data-page="taste"] .taste-v2-diagram > img {object-fit:contain;}
+  body[data-page="taste"] .taste-v2-table .taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage {
+    aspect-ratio:auto;
+    height:100%;
+    align-self:stretch;
+    min-height:calc(100vw * 9 / 16);
+  }
+  body[data-page="taste"] .taste-v2-photo-stage__image {
+    object-fit:contain;
+    object-position:center;
+  }
+}
+
+/* Tablets and small laptops: avoid cramped text in 50%-width columns. */
+@media (max-width:1199px) {
+  body[data-page="taste"] .taste-v2-duo {grid-template-columns:minmax(0,1fr);}
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane {
+    aspect-ratio:auto;
+    min-height:0;
+  }
+  body[data-page="taste"] .taste-v2-profile__story,
+  body[data-page="taste"] .taste-v2-notes__story,
+  body[data-page="taste"] .taste-v2-table__text,
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-table__text {
+    display:block;
+    min-height:0;
+    padding:clamp(65px,9vw,100px) 0;
+    height:auto;
+  }
+  body[data-page="taste"] .taste-v2-copy,
+  body[data-page="taste"] .taste-v2-table__text .taste-v2-copy {
+    width:min(620px,calc(100% - 72px));
+    max-width:100%;
+  }
+  body[data-page="taste"] .taste-v2-profile__ratings {
+    aspect-ratio:8 / 9;
+    min-height:0;
+    padding:clamp(34px,5vw,62px) 24px;
+  }
+  body[data-page="taste"] .taste-v2-ratings {width:min(440px,90%);gap:clamp(14px,2vw,22px);}
+  body[data-page="taste"] .taste-v2-notes__story {order:0;}
+  body[data-page="taste"] .taste-v2-notes .taste-v2-diagram {order:1;}
+  body[data-page="taste"] .taste-v2-diagram {
+    aspect-ratio:8 / 9;
+    min-height:0;
+    padding:0;
+  }
+  body[data-page="taste"] .taste-v2-diagram > img {
+    width:100%;height:100%;max-height:none;
+    object-fit:contain;
+  }
+  body[data-page="taste"] .taste-v2-table__text h2 {margin-bottom:clamp(34px,6vw,68px);}
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-table__text {order:0;}
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage {order:1;}
+  body[data-page="taste"] .taste-v2-table .taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-photo-stage {
+    position:relative;
+    width:100%;
+    height:auto;
+    min-height:0 !important;
+    aspect-ratio:8 / 9;
+  }
+  body[data-page="taste"] .taste-v2-photo-stage__image {object-fit:contain;}
+  body[data-page="taste"] .taste-v2-serving {
+    padding:44px 5%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:24px clamp(24px,4vw,50px);
+    min-height:0;
+  }
+  body[data-page="taste"] .taste-v2-serving h2 {
+    flex:0 0 100%;
+    white-space:normal;
+    text-align:center;
+    font-size:clamp(20px,3vw,26px);
+    line-height:1.5;
+  }
+  body[data-page="taste"] .taste-v2-serving__line {display:none;}
+  body[data-page="taste"] .taste-v2-serving__setting {min-width:100px;}
+}
+
+@media (max-width:767px) {
+  body[data-page="taste"] .taste-v2-copy,
+  body[data-page="taste"] .taste-v2-table__text .taste-v2-copy {
+    width:calc(100% - clamp(36px,9vw,76px));
+  }
+  body[data-page="taste"] .taste-v2-profile__story,
+  body[data-page="taste"] .taste-v2-notes__story,
+  body[data-page="taste"] .taste-v2-table__text,
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-table__text {
+    padding:clamp(55px,10vw,82px) 0;
+  }
+  body[data-page="taste"] .taste-v2-profile .taste-v2-profile__story,
+  body[data-page="taste"] .taste-v2-notes__story {
+    min-height:0;
+  }
+  body[data-page="taste"] .taste-v2-profile__ratings {
+    aspect-ratio:8 / 9;
+    padding:clamp(24px,5vw,46px) 18px;
+    min-height:0 !important;
+  }
+  body[data-page="taste"] .taste-v2-profile .taste-v2-profile__ratings {min-height:0;}
+  body[data-page="taste"] .taste-v2-ratings {width:min(440px,100%);gap:clamp(12px,2.8vw,20px);}
+  body[data-page="taste"] .taste-v2-score__dots {gap:clamp(8px,2.5vw,13px);}
+  body[data-page="taste"] .taste-v2-diagram {
+    aspect-ratio:8 / 9;
+    min-height:0 !important;
+    display:block;
+    padding:0;
+  }
+  body[data-page="taste"] .taste-v2-diagram > img {
+    display:block;
+    width:100%;height:auto;
+    max-height:none;
+    aspect-ratio:8/9;
+    object-fit:contain;
+  }
+  body[data-page="taste"] .taste-v2-serving {padding:40px 20px;gap:18px 30px;}
+  body[data-page="taste"] .taste-v2-serving h2 {font-size:clamp(18px,4vw,23px);}
+  body[data-page="taste"] .taste-v2-food {align-items:start;}
+  body[data-page="taste"] .taste-v2-food__illustration {align-self:center;}
+}
+
+@media (max-width:480px) {
+  /* Give vertical type and the scroll cue their own vertical space. */
+  body[data-page="taste"] .taste-v2-hero {
+    width:100%;height:clamp(320px,82vw,385px);
+    min-height:0;max-height:none;
+  }
+  body[data-page="taste"] .taste-v2-hero .hero-media {background:#29231d;}
+  body[data-page="taste"] .taste-v2-hero .hero-media img {
+    width:100%;height:100%;object-fit:contain;object-position:center;
+  }
+  body[data-page="taste"] .taste-v2-hero__text {top:12%;}
+  body[data-page="taste"] .taste-v2-hero__text h1 {
+    font-size:clamp(13px,3.8vw,16px);
+    line-height:1.8;
+    letter-spacing:.22em;
+  }
+  body[data-page="taste"] .taste-v2-scroll {bottom:10px;gap:3px;font-size:9px;}
+  body[data-page="taste"] .taste-v2-scroll span {font-size:19px;}
+  body[data-page="taste"] .taste-v2-profile__ratings {padding:20px 15px;}
+  body[data-page="taste"] .taste-v2-score>span:first-child {font-size:12px;gap:5px;}
+  body[data-page="taste"] .taste-v2-score small {font-size:10px;}
+  body[data-page="taste"] .taste-v2-score__dots {gap:clamp(7px,2.7vw,11px);}
+  body[data-page="taste"] .taste-v2-score__dots i {width:8px;height:8px;flex:0 0 8px;}
+  body[data-page="taste"] .taste-v2-table__text h2 {margin-bottom:35px;}
+  body[data-page="taste"] .taste-v2-table--last .taste-v2-table__text {padding-bottom:75px;}
+  body[data-page="taste"] .taste-v2-food {column-gap:clamp(9px,3vw,15px);}
+  body[data-page="taste"] .taste-v2-food__body {overflow-wrap:break-word;}
+  body[data-page="taste"] .taste-v2-food__tip {min-height:44px;}
+}
+
+@media (max-width:350px) {
+  body[data-page="taste"] .taste-v2-copy,
+  body[data-page="taste"] .taste-v2-table__text .taste-v2-copy {width:calc(100% - 36px);}
+  body[data-page="taste"] .taste-v2-profile__ratings {padding:18px 12px;}
+  body[data-page="taste"] .taste-v2-ratings {gap:10px;}
+  body[data-page="taste"] .taste-v2-food {grid-template-columns:25px minmax(0,1fr) 53px;column-gap:10px;}
+  body[data-page="taste"] .taste-v2-food__illustration {max-width:53px;}
+  body[data-page="taste"] .taste-v2-food__body p {font-size:11.5px;}
+}
+
+/* More specific than the earlier general .taste-v2-pane ratio reset. */
+body[data-page="taste"] .taste-v2-profile > .taste-v2-pane.taste-v2-profile__ratings {
+  aspect-ratio:8 / 9;
+  height:auto;
+  min-height:0;
+}
+body[data-page="taste"] .taste-v2-notes > .taste-v2-pane.taste-v2-diagram {
+  aspect-ratio:8 / 9;
+  height:auto;
+  min-height:0;
+}
+
+/* Stop replaced flex content from applying intrinsic minimum width to an image. */
+body[data-page="taste"] .taste-v2-diagram > img {
+  min-width:0;
+  min-height:0;
+  flex-shrink:1;
+  max-width:100%;
+}
+
+/* Grid-item aspect ratio must not expand an 8:9 panel past its 50% track. */
+@media (min-width:1200px) {
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane.taste-v2-diagram,
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane.taste-v2-profile__ratings {
+    width:100%;max-width:100%;min-width:0;
+    height:100%;aspect-ratio:auto;
+    min-height:calc(100vw * 9 / 16);
+  }
+}
+@media (max-width:1199px) {
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane.taste-v2-diagram,
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane.taste-v2-profile__ratings {
+    width:100%;max-width:100%;min-width:0;
+    height:auto;aspect-ratio:8 / 9;
+    min-height:0;
+  }
+}
+
+
+/* ============================================================
+   HAEON TASTE | Match each photo to its section's vertical frame
+   2026-10-19
+   - Desktop: text determines the section height. Photographic
+     panels stretch to that height with object-fit: cover.
+   - Stacked tablet/mobile layout: photos retain their full 8:9
+     native aspect ratio instead of copying the text panel height.
+   - Preserve non-photo icons and functional drawer styles.
+   ============================================================ */
+body[data-page="taste"] .taste-v2-duo {
+  align-items: stretch;
+}
+body[data-page="taste"] .taste-v2-photo-stage,
+body[data-page="taste"] .taste-v2-diagram {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+body[data-page="taste"] .taste-v2-photo-stage__image,
+body[data-page="taste"] .taste-v2-diagram > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* In two columns, neither the source photo's intrinsic ratio nor
+   earlier min-height constraints should set the grid row height. */
+@media (min-width: 1200px) {
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane,
+  body[data-page="taste"] .taste-v2-table > .taste-v2-pane {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 0;
+    align-self: stretch;
+  }
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane.taste-v2-profile__ratings,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane.taste-v2-diagram,
+  body[data-page="taste"] .taste-v2-table > .taste-v2-pane.taste-v2-photo-stage {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 0 !important;
+    max-height: none;
+  }
+  body[data-page="taste"] .taste-v2-profile__ratings {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* Once the editorial panels become a single column, restore the
+   photo frames' native portrait shape: 1920 × 2160 (8:9). */
+@media (max-width: 1199px) {
+  body[data-page="taste"] .taste-v2-table > .taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-diagram,
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-profile__ratings {
+    width: 100%;
+    height: auto;
+    min-height: 0 !important;
+    aspect-ratio: 8 / 9;
+  }
+  body[data-page="taste"] .taste-v2-profile__ratings {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* Header hero fills the height of its responsive frame rather than
+   leaving empty bands on compact phones. Keep the bottle visible. */
+@media (max-width: 480px) {
+  body[data-page="taste"] .taste-v2-hero .hero-media img {
+    object-fit: cover;
+    object-position: 32% center;
+  }
+}
+
+
+/* ==============================================================
+   HAEON TASTE — 960 × 1080 photo-frame grid (2026-10-19)
+   Design reference: 1920px full stage = 960px per column;
+   each 960px photo track has a minimum design height of 1080px.
+   At smaller desktop widths the minimum height scales with width;
+   text can increase the row height instead of overflowing it.
+   At single-column widths photo stages retain their 8:9 ratio.
+   ============================================================= */
+@media (min-width:1200px) {
+  body[data-page="taste"] .taste-v2-duo {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-auto-rows:minmax(calc(100vw * 9 / 16),auto);
+    align-items:stretch;
+  }
+  body[data-page="taste"] .taste-v2-duo > .taste-v2-pane {
+    min-width:0;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    align-self:stretch;
+  }
+  body[data-page="taste"] .taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-diagram {
+    position:relative;
+    width:100%;
+    overflow:hidden;
+  }
+  body[data-page="taste"] .taste-v2-photo-stage__image,
+  body[data-page="taste"] .taste-v2-diagram > img {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+    max-height:none;
+    object-position:center;
+  }
+  body[data-page="taste"] .taste-v2-photo-stage__image {object-fit:cover;}
+  body[data-page="taste"] .taste-v2-diagram > img {object-fit:cover;}
+}
+@media (max-width:1199px) {
+  body[data-page="taste"] .taste-v2-duo {grid-template-columns:minmax(0,1fr);}
+  body[data-page="taste"] .taste-v2-table > .taste-v2-pane.taste-v2-photo-stage,
+  body[data-page="taste"] .taste-v2-notes > .taste-v2-pane.taste-v2-diagram,
+  body[data-page="taste"] .taste-v2-profile > .taste-v2-pane.taste-v2-profile__ratings {
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:960 / 1080;
+  }
+  body[data-page="taste"] .taste-v2-photo-stage__image,
+  body[data-page="taste"] .taste-v2-diagram > img {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    max-width:100%;
+    max-height:none;
+    object-position:center;
+  }
+  body[data-page="taste"] .taste-v2-photo-stage__image {object-fit:cover;}
+  body[data-page="taste"] .taste-v2-diagram > img {object-fit:contain;}
+}

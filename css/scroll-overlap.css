@@ -1,0 +1,67 @@
+/* HAEON main: mosaic scrolls over the still product-stage. */
+/* Load this stylesheet AFTER header.css and mosaic.css. */
+
+/* Keep the site header and all its navigation above both sections. */
+body[data-page="index"] .site-header.minimal-header {
+  z-index: 40;
+}
+
+/* A shared stacking context for the two content sections. */
+body[data-page="index"] #main {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Hero stays visible below the fixed header while the mosaic approaches. */
+body[data-page="index"] .product-stage {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 0;
+  /* Its existing margin, height, padding and bottle image are preserved. */
+}
+
+/* The mosaic naturally moves upward with scrolling and covers the hero. */
+body[data-page="index"] #discover {
+  position: relative;
+  z-index: 2;
+  /* Do not change grid size or the site's background imagery. */
+}
+
+/* Three existing mosaic videos crop/fit just like mosaic images. */
+body[data-page="index"] .mosaic-image video {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* PRODUCT STAGE: decorative full-bleed MP4 behind transparent bottle PNG. */
+body[data-page="index"] .product-stage {
+  isolation: isolate;
+}
+
+body[data-page="index"] .product-stage__background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body[data-page="index"] .product-stage__bottle {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="index"] .product-stage__scroll {
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0,0,0,.7);
+}

@@ -1,0 +1,33 @@
+/* HAEON | Font-metric compensation (2026-10-21)
+ *
+ * font-size-adjust preserves a font's perceived lowercase height when
+ * another font in its stack is used. It is NOT a responsive font-size scale.
+ * Page-specific font-size/clamp()/media-query values remain unchanged.
+ * Using 'from-font' (not an arbitrary numeric ratio) avoids resizing
+ * Gowun Batang, Noto Sans/Serif KR and Cormorant Garamond unexpectedly.
+ * Browsers without support ignore the block and keep the original design.
+ */
+@supports (font-size-adjust: from-font) {
+  /* Inherited by all page text, including Korean/English mixed content. */
+  body {
+    font-size-adjust: from-font;
+  }
+
+  /* Re-establish the ratio at points where the main font family changes. */
+  h1, h2, h3, h4,
+  .latin,
+  button, input, select, textarea {
+    font-size-adjust: from-font;
+  }
+}
+
+/* On narrow screens, prevent browser-specific automatic text enlargement.
+ * Existing per-page mobile typography stays in charge of actual font-size.
+ * 100% preserves user zoom/text settings; it does not disable pinch-zoom.
+ */
+@media (max-width: 767px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}

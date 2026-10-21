@@ -1,0 +1,19 @@
+body[data-page="admin-members"] .haeon-admin-console{background:#fff;padding:clamp(18px,4vw,38px)}
+.haeon-admin-tools{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-bottom:17px}
+.haeon-admin-tools input{width:min(350px,100%);padding:12px;border:1px solid #bbc0c2;background:white;font:inherit}
+.haeon-admin-tools .commerce-secondary{margin:0;min-height:42px}
+.haeon-admin-table-scroll{width:100%;overflow-x:auto}
+.haeon-admin-table{border-collapse:collapse;width:100%;min-width:880px;font-size:13px;text-align:left}
+.haeon-admin-table th,.haeon-admin-table td{padding:14px 11px;border-bottom:1px solid #e7e2d9;vertical-align:middle}
+.haeon-admin-table th{white-space:nowrap;background:#f2eee7}
+.haeon-admin-table td button{border:1px solid #697988;background:white;padding:8px 10px;cursor:pointer;white-space:nowrap}
+.haeon-admin-table td button[disabled]{opacity:.5;cursor:default}
+.haeon-admin-pagination{display:flex;align-items:center;justify-content:center;gap:24px;margin:25px 0}
+.haeon-admin-pagination button{background:none;border:1px solid #aeb3b4;padding:9px 17px;cursor:pointer}
+.haeon-admin-pagination button:disabled{opacity:.4;cursor:default}
+.haeon-account-dashboard{padding:5px 0 20px}.haeon-account-dashboard h2{margin-bottom:16px}.haeon-account-dashboard .commerce-primary{margin-top:23px}
+.commerce-auth-message,#haeon-admin-message{min-height:20px;line-height:1.6;margin:16px 0;font-size:13px;color:#214c67}
+.commerce-auth-message.is-error,#haeon-admin-message.is-error{color:#a62924}
+body[data-page="account"] .commerce-auth-panel:has(.haeon-account-dashboard:not([hidden])) .commerce-auth-tabs{display:none}
+/* Preserve the semantic hidden state regardless of the existing tab grid style. */
+body[data-page="account"] .commerce-auth-tabs[hidden]{display:none!important}

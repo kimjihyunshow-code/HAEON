@@ -1,0 +1,96 @@
+/* FOOTER — charcoal layout matching the supplied reference */
+.site-footer.brand-footer{min-height:280px;padding:46px 4.2% 44px;background:#222;color:#c8c8c8}
+.brand-footer__top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:29px;border-bottom:1px solid #626262}
+.brand-footer__caption,.brand-footer__back{font-size:11px;font-weight:500;line-height:1.5;letter-spacing:.11em}
+.brand-footer__back{display:inline-flex;align-items:center;justify-content:flex-end;min-height:44px;white-space:nowrap}
+.brand-footer__body{display:grid;grid-template-columns:1.2fr 1.3fr auto;align-items:center;gap:40px;padding-top:28px}
+.brand-footer__logo{display:block;width:96px;height:103px}
+.brand-footer__logo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:normal}
+.brand-footer__message{font-size:11px;line-height:1.9;color:#b5b5b5}
+.brand-footer__right{font-size:11px;line-height:1.9}
+.brand-footer__nav{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.brand-footer__nav a{display:inline-flex;align-items:center;min-height:44px;line-height:1;white-space:nowrap}
+.brand-footer__copyright{margin-top:-5px;white-space:nowrap}
+.brand-footer a:hover{color:#fff}
+.brand-footer a:focus-visible{outline:2px solid #f6f1e8;outline-offset:5px}
+@media(max-width:900px){.brand-footer__body{grid-template-columns:1fr 1fr;gap:24px}.brand-footer__message{grid-column:1;grid-row:2}.brand-footer__right{grid-column:2;grid-row:1 / span 2;align-self:end}.brand-footer__copyright{text-align:right}}
+@media(max-width:560px){.site-footer.brand-footer{padding:28px 22px 32px}.brand-footer__top{gap:14px;padding-bottom:19px}.brand-footer__caption,.brand-footer__back{font-size:8px;letter-spacing:.08em}.brand-footer__body{grid-template-columns:1fr;gap:22px;padding-top:27px}.brand-footer__logo{width:84px;height:90px}.brand-footer__message{grid-column:auto;grid-row:auto}.brand-footer__right{grid-column:auto;grid-row:auto}.brand-footer__nav{justify-content:flex-start;gap:16px}.brand-footer__copyright{text-align:left;margin-top:0}}
+
+
+/* HAEON — wave rises above the footer and overlaps the last MAIN row. */
+.site-footer.brand-footer {
+  position: relative;
+  isolation: isolate;
+  z-index: 15;
+  overflow: visible;
+  background-color: #222;
+}
+.site-footer.brand-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% - 2px); /* overlaps footer slightly to hide seams */
+  height: auto;
+  aspect-ratio: 2171 / 194.2;
+  background-image: url("../assets/images/footer_wave.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.site-footer.brand-footer > * { position: relative; z-index: 1; }
+
+/* Mobile: retain the desktop wave's proportions and droplets instead of
+   squeezing the entire 2171px illustration into a tiny strip.  The shape
+   is cropped horizontally, centered, without any additional page height. */
+@media (max-width: 767px) {
+  .site-footer.brand-footer::before {
+    height: clamp(78px, 20vw, 110px);
+    aspect-ratio: auto;
+    background-size: auto 100%;
+    background-position: center bottom;
+  }
+}
+
+
+/* HAEON / floating Back-to-top control. Uses supplied original SVGs.
+   On all pages this replaces the footer text link and duplicate arrow buttons. */
+.haeon-to-top {
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right, 0px) + 20px);
+  bottom: max(24px, env(safe-area-inset-bottom, 0px) + 20px);
+  z-index: 55;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('../assets/images/Top_OFF.svg') center / contain no-repeat;
+  filter: drop-shadow(0 2px 7px rgba(0, 0, 0, .16));
+  cursor: pointer;
+  transition: transform .18s ease, filter .18s ease;
+}
+@media (hover:hover) {
+  .haeon-to-top:hover {
+    background-image: url('../assets/images/Top_Hover.svg');
+    transform: translateY(-3px);
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, .17));
+  }
+}
+.haeon-to-top:focus-visible {
+  outline: 2px solid #154972;
+  outline-offset: 4px;
+}
+@media (max-width: 767px) {
+  .haeon-to-top {
+    right: max(14px, env(safe-area-inset-right, 0px) + 12px);
+    bottom: max(14px, env(safe-area-inset-bottom, 0px) + 12px);
+    width: 46px;
+    height: 46px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .haeon-to-top { transition: none; }
+  .haeon-to-top:hover { transform: none; }
+}

@@ -1,0 +1,911 @@
+/* ============================================================
+   HAEON STORY — DESIGN OPTION 2 / TYPE AND SPACING STUDY
+   The composition follows the user's supplied vertical wireframe.
+   All artwork placeholders intentionally remain empty.
+   Scoped to body[data-page="brand"] only.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap');
+
+body[data-page="brand"] {
+  --story-ink: #1d1d1d;
+  --story-muted: #686868;
+  --story-hairline: #a8a8a8;
+  --story-paper: #fff;
+  background: var(--story-paper);
+  color: var(--story-ink);
+  font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif;
+}
+body[data-page="brand"] .brand-v2-main {padding-top: var(--header-height);}
+body[data-page="brand"] .brand-v2-main h1,
+body[data-page="brand"] .brand-v2-main h2,
+body[data-page="brand"] .brand-v2-main h3,
+body[data-page="brand"] .brand-v2-main h4 {
+  font-family: 'Gowun Batang', 'Noto Serif KR', serif;
+  font-weight: 400;
+}
+
+/* 01 — Tall, quiet black hero. Logo art area is intentionally empty. */
+body[data-page="brand"] .brand-v2-hero {
+  position: relative;
+  min-height: 720px;
+  background: #050505;
+  color: #fff;
+  overflow: hidden;
+}
+body[data-page="brand"] .brand-v2-hero__inner {position: relative; width: 100%; height: 720px;}
+body[data-page="brand"] .brand-v2-hero__logo-placeholder {
+  position: absolute;
+  top: 39%;
+  left: 68%;
+  transform: translate(-50%,-50%);
+  width: clamp(100px,10vw,155px);
+  aspect-ratio: 1;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.22);
+  box-sizing: border-box;
+}
+body[data-page="brand"] .brand-v2-hero__copy {
+  position: absolute;
+  top: 77%;
+  left: 68%;
+  transform: translate(-50%,-50%);
+  width: min(500px,60%);
+  text-align: center;
+}
+body[data-page="brand"] .brand-v2-hero__copy h1 {
+  font-size: clamp(19px,1.9vw,28px);
+  line-height: 1.6;
+  letter-spacing: -.045em;
+  margin: 0 0 6px;
+}
+body[data-page="brand"] .brand-v2-hero__copy p {
+  font-size: clamp(10px,.9vw,13px);
+  line-height: 1.8;
+  letter-spacing: -.01em;
+  color: #d7d7d7;
+}
+
+/* 02 — One uninterrupted white brand-guide canvas. */
+body[data-page="brand"] .brand-v2-page {
+  background: var(--story-paper);
+  padding: 0 0 clamp(190px,11vw,235px);
+}
+body[data-page="brand"] .brand-v2-block {
+  width: min(1080px,calc(100% - 112px));
+  margin: 0 auto;
+}
+body[data-page="brand"] .brand-v2-block--narrow {max-width: 740px;}
+body[data-page="brand"] .brand-v2-intro {padding: 100px 0 70px;}
+body[data-page="brand"] .brand-v2-intro h2,
+body[data-page="brand"] .brand-v2-beliefs h2,
+body[data-page="brand"] .brand-v2-gift h2 {
+  font-size: clamp(20px,1.7vw,26px);
+  line-height: 1.7;
+  letter-spacing: -.04em;
+  margin: 0;
+}
+body[data-page="brand"] .brand-v2-prose {
+  max-width: 500px;
+  margin: 175px auto 0;
+  display: grid;
+  gap: 14px;
+}
+body[data-page="brand"] .brand-v2-prose p,
+body[data-page="brand"] .brand-v2-naming p,
+body[data-page="brand"] .brand-v2-gift > p {
+  font-size: 13px;
+  line-height: 1.95;
+  letter-spacing: -.02em;
+  color: #444;
+}
+
+/* 03 — Naming. Characters center-aligned like the original guide. */
+body[data-page="brand"] .brand-v2-naming {padding: 85px 0 110px;}
+body[data-page="brand"] .brand-v2-namepair {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(38px,5.7vw,82px);
+  margin: 0 auto 42px;
+}
+body[data-page="brand"] .brand-v2-namepair__item {display:flex;flex-direction:column;align-items:center;gap:12px;min-width:54px;}
+body[data-page="brand"] .brand-v2-namepair__item strong {
+  font-family: 'Gowun Batang', serif;
+  font-weight:400;
+  font-size: clamp(44px,4.5vw,70px);
+  line-height:1.12;
+}
+body[data-page="brand"] .brand-v2-namepair__item span {font-size:13px;line-height:1.4;letter-spacing:.05em;}
+body[data-page="brand"] .brand-v2-namepair__item em {font-style:normal;font-size:13px;line-height:1.4;}
+body[data-page="brand"] .brand-v2-naming h3 {font-size:18px;letter-spacing:-.03em;margin:0 0 12px;}
+body[data-page="brand"] .brand-v2-naming p {max-width:490px;margin-inline:auto;}
+
+/* 04 — Logo identity, three slots per row; captions sit *below* art. */
+body[data-page="brand"] .brand-v2-left-title {
+  display:grid;
+  grid-template-columns: 104px minmax(0,1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+body[data-page="brand"] .brand-v2-left-title__label {
+  border-left:1px solid var(--story-hairline);
+  padding: 18px 0 0 23px;
+  writing-mode:vertical-rl;
+  text-orientation:upright;
+  font-family:'Gowun Batang',serif;
+  font-size:26px;
+  letter-spacing:.03em;
+  line-height:1.5;
+  align-self:stretch;
+}
+body[data-page="brand"] .brand-v2-left-title__content {min-width:0;}
+body[data-page="brand"] .brand-v2-logo-section {margin-bottom:115px;}
+body[data-page="brand"] .brand-v2-logo-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  align-items:start;
+  margin: 0 0 32px;
+}
+body[data-page="brand"] .brand-v2-logo-card {min-width:0;}
+body[data-page="brand"] .brand-v2-placeholder {
+  background:#e8e8e8;
+  border:0;
+}
+body[data-page="brand"] .brand-v2-placeholder--logo {width:100%;aspect-ratio: 1.45 / 1;}
+body[data-page="brand"] .brand-v2-logo-card h3 {
+  font-size:16px;
+  line-height:1.5;
+  margin:13px 0 7px;
+}
+body[data-page="brand"] .brand-v2-logo-card p,
+body[data-page="brand"] .brand-v2-mono-caption p,
+body[data-page="brand"] .brand-v2-mono__item p,
+body[data-page="brand"] .brand-v2-color-intro,
+body[data-page="brand"] .brand-v2-belief-grid p,
+body[data-page="brand"] .brand-v2-color-grid p {
+  font-size:11px;
+  line-height:1.8;
+  color:#555;
+  letter-spacing:-.01em;
+}
+body[data-page="brand"] .brand-v2-mono-row {
+  display:grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap:24px;
+  align-items:end;
+}
+body[data-page="brand"] .brand-v2-mono-caption h4 {font-size:16px; margin-bottom:9px;}
+body[data-page="brand"] .brand-v2-mono {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+body[data-page="brand"] .brand-v2-mono__item {display:flex;flex-direction:column;align-items:center;gap:9px;min-width:0;}
+body[data-page="brand"] .brand-v2-placeholder--mono {width:min(100%,130px);aspect-ratio:1;margin:0 auto;background:#e8e8e8;}
+body[data-page="brand"] .brand-v2-placeholder--mono-dark {background:#111;}
+body[data-page="brand"] .brand-v2-mono__item p {text-align:center;}
+
+/* 05 — Four equal editorial principles in one row. */
+body[data-page="brand"] .brand-v2-beliefs {margin-bottom:105px;}
+body[data-page="brand"] .brand-v2-belief-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;margin-top:145px;}
+body[data-page="brand"] .brand-v2-belief-grid article {min-width:0;}
+body[data-page="brand"] .brand-v2-belief-grid h3 {
+  font-family:var(--font-latin,Georgia,serif);
+  font-size:31px;
+  line-height:1.15;
+  color:#bcbcbc;
+  margin:0 0 12px;
+  font-weight:400;
+}
+body[data-page="brand"] .brand-v2-belief-grid h4 {font-size:16px;line-height:1.5;margin-bottom:9px;}
+
+/* 06 — Brand colors, in one restrained horizontal strip. */
+body[data-page="brand"] .brand-v2-color-section {margin-bottom:116px;}
+body[data-page="brand"] .brand-v2-color-intro {text-align:center;margin:0 0 25px;}
+body[data-page="brand"] .brand-v2-color-grid {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;}
+body[data-page="brand"] .brand-v2-color-grid article {min-width:0;text-align:center;}
+body[data-page="brand"] .brand-v2-color-grid .swatch {display:block;width: min(64px,90%);aspect-ratio:1;border-radius:50%;background:transparent !important;border:0;margin:0 auto 13px;box-sizing:border-box;}
+body[data-page="brand"] .brand-v2-color-grid h3 {font-size:12px;line-height:1.45;margin-bottom:6px;letter-spacing:-.04em;}
+body[data-page="brand"] .brand-v2-color-grid p {font-size:10px;line-height:1.7;overflow-wrap:anywhere;}
+
+/* 07 — Gift-story type over five deliberately EMPTY image blocks. */
+body[data-page="brand"] .brand-v2-gift {max-width:1080px;}
+body[data-page="brand"] .brand-v2-gift > p {max-width:480px;margin:135px auto 0;}
+body[data-page="brand"] .brand-v2-gallery {
+  display:grid;
+  width:100%;
+  margin:128px auto 0;
+  height:clamp(430px,33.5vw,555px);
+  grid-template-columns:1.5fr 1fr .95fr;
+  grid-template-rows:repeat(3,minmax(0,1fr));
+  gap:6px;
+}
+body[data-page="brand"] .brand-v2-gallery__item {background:#e4e4e4;border:0;min-width:0;min-height:0;}
+body[data-page="brand"] .brand-v2-gallery__item--1 {grid-column:1;grid-row:1 / 3;}
+body[data-page="brand"] .brand-v2-gallery__item--2 {grid-column:2;grid-row:1 / 3;}
+body[data-page="brand"] .brand-v2-gallery__item--3 {grid-column:3;grid-row:1;}
+body[data-page="brand"] .brand-v2-gallery__item--4 {grid-column:3;grid-row:2 / 4;}
+body[data-page="brand"] .brand-v2-gallery__item--5 {grid-column:1 / 3;grid-row:3;display:block;}
+
+/* Tablet: preserve the original horizontal composition; scale typography + whitespace. */
+@media(max-width:1023px){
+ body[data-page="brand"] .brand-v2-hero,
+ body[data-page="brand"] .brand-v2-hero__inner {height:480px; min-height:0;}
+ body[data-page="brand"] .brand-v2-hero__logo-placeholder {width:95px;}
+ body[data-page="brand"] .brand-v2-hero__copy {width:54%;}
+ body[data-page="brand"] .brand-v2-hero__copy h1 {font-size:21px;}
+ body[data-page="brand"] .brand-v2-block {width:calc(100% - 80px);}
+ body[data-page="brand"] .brand-v2-intro {padding:65px 0 45px;}
+ body[data-page="brand"] .brand-v2-prose {max-width:410px;margin-top:100px;gap:10px;}
+ body[data-page="brand"] .brand-v2-naming {padding:64px 0 78px;}
+ body[data-page="brand"] .brand-v2-namepair {margin-bottom:29px;gap:45px;}
+ body[data-page="brand"] .brand-v2-namepair__item strong {font-size:54px;}
+ body[data-page="brand"] .brand-v2-left-title {grid-template-columns:66px minmax(0,1fr);gap:20px;}
+ body[data-page="brand"] .brand-v2-left-title__label {font-size:20px;padding-left:14px;}
+ body[data-page="brand"] .brand-v2-logo-section {margin-bottom:90px;}
+ body[data-page="brand"] .brand-v2-logo-grid {gap:15px;margin-bottom:25px;}
+ body[data-page="brand"] .brand-v2-mono-row {gap:12px;grid-template-columns:.78fr 2.2fr;}
+ body[data-page="brand"] .brand-v2-mono {gap:10px;}
+ body[data-page="brand"] .brand-v2-placeholder--mono {max-width:86px;}
+ body[data-page="brand"] .brand-v2-beliefs {margin-bottom:85px;}
+ body[data-page="brand"] .brand-v2-belief-grid {margin-top:85px;gap:16px;}
+ body[data-page="brand"] .brand-v2-belief-grid h3 {font-size:25px;}
+ body[data-page="brand"] .brand-v2-color-section {margin-bottom:85px;}
+ body[data-page="brand"] .brand-v2-color-grid {gap:8px;}
+ body[data-page="brand"] .brand-v2-color-grid .swatch {width:min(53px,88%);}
+ body[data-page="brand"] .brand-v2-gift > p {margin-top:85px;}
+ body[data-page="brand"] .brand-v2-gallery {margin-top:85px;height:330px;gap:4px;}
+ body[data-page="brand"] .brand-v2-page {padding-bottom:90px;}
+}
+
+/* Mobile reference: same visual hierarchy, responsive typesetting. */
+@media(max-width:767px){
+ body[data-page="brand"] .brand-v2-hero,
+ body[data-page="brand"] .brand-v2-hero__inner {height:310px;min-height:0;}
+ body[data-page="brand"] .brand-v2-hero__logo-placeholder {top:40%;width:76px;}
+ body[data-page="brand"] .brand-v2-hero__copy {top:79%;width:60%;}
+ body[data-page="brand"] .brand-v2-hero__copy h1 {font-size:14px;line-height:1.5;margin-bottom:3px;}
+ body[data-page="brand"] .brand-v2-hero__copy p {font-size:9px;line-height:1.5;}
+ body[data-page="brand"] .brand-v2-block {width:calc(100% - 48px);}
+ body[data-page="brand"] .brand-v2-block--narrow {max-width:500px;}
+ body[data-page="brand"] .brand-v2-intro {padding:50px 0 24px;}
+ body[data-page="brand"] .brand-v2-intro h2,
+ body[data-page="brand"] .brand-v2-beliefs h2,
+ body[data-page="brand"] .brand-v2-gift h2 {font-size:15px;}
+ body[data-page="brand"] .brand-v2-prose {max-width:330px;margin-top:65px;gap:12px;}
+ body[data-page="brand"] .brand-v2-prose p,
+ body[data-page="brand"] .brand-v2-naming p,
+ body[data-page="brand"] .brand-v2-gift > p {font-size:10px;line-height:1.75;}
+ body[data-page="brand"] .brand-v2-naming {padding:52px 0 58px;}
+ body[data-page="brand"] .brand-v2-namepair {gap:40px;margin-bottom:23px;}
+ body[data-page="brand"] .brand-v2-namepair__item {gap:6px;min-width:36px;}
+ body[data-page="brand"] .brand-v2-namepair__item strong {font-size:40px;}
+ body[data-page="brand"] .brand-v2-namepair__item span,
+ body[data-page="brand"] .brand-v2-namepair__item em {font-size:10px;}
+ body[data-page="brand"] .brand-v2-naming h3 {font-size:12px;margin-bottom:7px;}
+ body[data-page="brand"] .brand-v2-left-title {grid-template-columns:49px minmax(0,1fr);gap:14px;}
+ body[data-page="brand"] .brand-v2-left-title__label {font-size:15px;padding:12px 0 0 8px;}
+ body[data-page="brand"] .brand-v2-logo-section {margin-bottom:65px;}
+ body[data-page="brand"] .brand-v2-logo-grid {gap:11px;margin-bottom:20px;}
+ body[data-page="brand"] .brand-v2-logo-card h3 {font-size:12px;margin:8px 0 4px;}
+ body[data-page="brand"] .brand-v2-logo-card p,
+ body[data-page="brand"] .brand-v2-mono-caption p,
+ body[data-page="brand"] .brand-v2-mono__item p,
+ body[data-page="brand"] .brand-v2-belief-grid p,
+ body[data-page="brand"] .brand-v2-color-intro {font-size:9px;line-height:1.65;}
+ body[data-page="brand"] .brand-v2-mono-caption h4 {font-size:12px;margin-bottom:5px;}
+ body[data-page="brand"] .brand-v2-mono__item {gap:4px;}
+ body[data-page="brand"] .brand-v2-placeholder--mono {width:min(68px,100%);}
+ body[data-page="brand"] .brand-v2-mono {gap:8px;}
+ body[data-page="brand"] .brand-v2-beliefs {margin-bottom:66px;}
+ body[data-page="brand"] .brand-v2-belief-grid {margin-top:65px;gap:10px;}
+ body[data-page="brand"] .brand-v2-belief-grid h3 {font-size:17px;margin-bottom:6px;}
+ body[data-page="brand"] .brand-v2-belief-grid h4 {font-size:11px;margin-bottom:4px;}
+ body[data-page="brand"] .brand-v2-color-section {margin-bottom:70px;}
+ body[data-page="brand"] .brand-v2-color-intro {margin-bottom:16px;}
+ body[data-page="brand"] .brand-v2-color-grid {gap:5px;}
+ body[data-page="brand"] .brand-v2-color-grid .swatch {width:min(41px,90%);margin-bottom:7px;}
+ body[data-page="brand"] .brand-v2-color-grid h3 {font-size:8px;margin-bottom:4px;}
+ body[data-page="brand"] .brand-v2-color-grid p {font-size:7px;line-height:1.55;}
+ body[data-page="brand"] .brand-v2-gift > p {margin-top:58px;max-width:270px;}
+ body[data-page="brand"] .brand-v2-gallery {margin-top:57px;height:255px;gap:3px;}
+ body[data-page="brand"] .brand-v2-page {padding-bottom:75px;}
+}
+
+/* Small phone: allow breathing room and readable captions without losing the rows. */
+@media(max-width:480px){
+ body[data-page="brand"] .brand-v2-hero,
+ body[data-page="brand"] .brand-v2-hero__inner {height:340px;}
+ body[data-page="brand"] .brand-v2-hero__logo-placeholder {left:62%;}
+ body[data-page="brand"] .brand-v2-hero__copy {left:62%;width:70%;}
+ body[data-page="brand"] .brand-v2-hero__copy h1 {font-size:16px;}
+ body[data-page="brand"] .brand-v2-hero__copy p {font-size:10px;}
+ body[data-page="brand"] .brand-v2-block {width:calc(100% - 36px);}
+ body[data-page="brand"] .brand-v2-intro h2,
+ body[data-page="brand"] .brand-v2-beliefs h2,
+ body[data-page="brand"] .brand-v2-gift h2 {font-size:17px;}
+ body[data-page="brand"] .brand-v2-prose {margin-top:60px;}
+ body[data-page="brand"] .brand-v2-prose p,
+ body[data-page="brand"] .brand-v2-naming p,
+ body[data-page="brand"] .brand-v2-gift > p {font-size:12px;}
+ body[data-page="brand"] .brand-v2-naming {padding-bottom:70px;}
+ body[data-page="brand"] .brand-v2-left-title {grid-template-columns:26px minmax(0,1fr);gap:12px;}
+ body[data-page="brand"] .brand-v2-left-title__label {font-size:13px;padding-left:4px;}
+ body[data-page="brand"] .brand-v2-logo-grid {gap:7px;}
+ body[data-page="brand"] .brand-v2-logo-card h3 {font-size:12px;}
+ body[data-page="brand"] .brand-v2-logo-card p {font-size:10px;}
+ body[data-page="brand"] .brand-v2-mono-row {grid-template-columns:1fr;gap:14px;}
+ body[data-page="brand"] .brand-v2-mono {grid-template-columns:repeat(3,minmax(0,1fr));}
+ body[data-page="brand"] .brand-v2-placeholder--mono {width:min(100%,76px);}
+ body[data-page="brand"] .brand-v2-belief-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px;margin-top:48px;}
+ body[data-page="brand"] .brand-v2-belief-grid h3 {font-size:25px;}
+ body[data-page="brand"] .brand-v2-belief-grid h4 {font-size:14px;}
+ body[data-page="brand"] .brand-v2-belief-grid p {font-size:11px;}
+ body[data-page="brand"] .brand-v2-color-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px;}
+ body[data-page="brand"] .brand-v2-color-grid .swatch {width:46px;}
+ body[data-page="brand"] .brand-v2-color-grid h3 {font-size:11px;}
+ body[data-page="brand"] .brand-v2-color-grid p {font-size:9px;}
+ body[data-page="brand"] .brand-v2-gallery {height:300px;margin-top:65px;}
+}
+
+/* Artboard-like inset at reference width, leaving the same central text columns. */
+@media (min-width: 481px) and (max-width: 767px) {
+  body[data-page="brand"] .brand-v2-left-title,
+  body[data-page="brand"] .brand-v2-gift {
+    width: calc(100% - 25%);
+  }
+  body[data-page="brand"] .brand-v2-intro {padding-bottom:12px;}
+  body[data-page="brand"] .brand-v2-prose {margin-top:52px;}
+  body[data-page="brand"] .brand-v2-naming {padding-top:39px;padding-bottom:43px;}
+  body[data-page="brand"] .brand-v2-logo-section {margin-bottom:48px;}
+  body[data-page="brand"] .brand-v2-logo-grid {margin-bottom:14px;}
+  body[data-page="brand"] .brand-v2-beliefs {margin-bottom:49px;}
+  body[data-page="brand"] .brand-v2-belief-grid {margin-top:50px;}
+  body[data-page="brand"] .brand-v2-color-section {margin-bottom:50px;}
+  body[data-page="brand"] .brand-v2-gift > p {margin-top:43px;}
+  body[data-page="brand"] .brand-v2-gallery {margin-top:45px;}
+}
+
+
+/* ========================================================
+   REFERENCE MATCH — enlarged seven-panel source screenshots
+   Exact copy, line rules, framed logotypes, value columns.
+   Hero/logo/color artworks remain deliberately blank.
+   ======================================================== */
+body[data-page="brand"] .brand-v2-hero,
+body[data-page="brand"] .brand-v2-hero__inner {
+  height: clamp(340px, 50.85vw, 720px);
+  min-height: 0;
+}
+body[data-page="brand"] .brand-v2-hero__logo-placeholder {
+  width: clamp(78px, 8.4vw, 130px);
+  background: #101010;
+  border: 1px solid rgba(255,255,255,.17);
+}
+body[data-page="brand"] .brand-v2-hero__copy h1 {font-size:clamp(18px,1.85vw,25px);letter-spacing:-.04em;}
+body[data-page="brand"] .brand-v2-hero__copy p {font-size:clamp(11px,.95vw,13px);}
+
+/* Opening title -> vertical 102px fine line -> copy, with same line breaks. */
+body[data-page="brand"] .brand-v2-intro {padding:73px 0 127px;}
+body[data-page="brand"] .brand-v2-intro h2,
+body[data-page="brand"] .brand-v2-beliefs h2,
+body[data-page="brand"] .brand-v2-gift h2 {
+  font-size:clamp(17px,1.45vw,20px);
+  font-weight:400;
+  letter-spacing:-.025em;
+  line-height:1.6;
+}
+body[data-page="brand"] .brand-v2-intro h2::after,
+body[data-page="brand"] .brand-v2-beliefs h2::after,
+body[data-page="brand"] .brand-v2-gift h2::after {
+  content:"";
+  display:block;
+  width:1px;
+  height:102px;
+  background:#858585;
+  margin:25px auto 0;
+}
+body[data-page="brand"] .brand-v2-prose {
+  max-width:660px;
+  margin:25px auto 0;
+  gap:16px;
+}
+body[data-page="brand"] .brand-v2-prose p,
+body[data-page="brand"] .brand-v2-naming p,
+body[data-page="brand"] .brand-v2-gift > p {
+  font-family:'Gowun Batang','Noto Serif KR',serif;
+  font-size:13px;
+  line-height:1.7;
+  letter-spacing:-.02em;
+}
+
+/* Name: character + hanja + two upright syllables, copy centered below. */
+body[data-page="brand"] .brand-v2-naming {padding:65px 0 77px;}
+body[data-page="brand"] .brand-v2-namepair {gap:38px;margin-bottom:63px;}
+body[data-page="brand"] .brand-v2-namepair__item {gap:8px;min-width:30px;}
+body[data-page="brand"] .brand-v2-namepair__item strong {font-size:48px;line-height:1.1;}
+body[data-page="brand"] .brand-v2-namepair__item span {font-size:12px;margin-top:8px;}
+body[data-page="brand"] .brand-v2-namepair__item em {font-size:12px;line-height:1.9;}
+body[data-page="brand"] .brand-v2-naming h3 {font-size:14px;letter-spacing:-.04em;margin-bottom:20px;}
+body[data-page="brand"] .brand-v2-naming p {max-width:630px;}
+
+/* Thin rectangle around the entire logo specimen panel. */
+body[data-page="brand"] .brand-v2-logo-section {
+  width:min(1110px,calc(100% - 50px));
+  border:1px solid #9b9b9b;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:23px;
+  padding:31px 36px 34px;
+  margin-bottom:90px;
+}
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-left-title__label {
+  border:0;
+  padding:16px 0 0;
+  font-size:23px;
+  line-height:1.2;
+}
+body[data-page="brand"] .brand-v2-logo-grid {
+  gap:clamp(13px,2.5vw,35px);
+  margin-bottom:36px;
+  align-items:start;
+}
+body[data-page="brand"] .brand-v2-placeholder--logo {
+  width:85%;
+  max-width:180px;
+  aspect-ratio:1.22 / 1;
+  margin:0 auto 22px;
+}
+body[data-page="brand"] .brand-v2-logo-card h3 {
+  font-size:13px;
+  line-height:1.4;
+  margin:0 0 8px;
+}
+body[data-page="brand"] .brand-v2-logo-card p,
+body[data-page="brand"] .brand-v2-mono-caption p,
+body[data-page="brand"] .brand-v2-mono__item p {
+  font-family:'Gowun Batang','Noto Serif KR',serif;
+  font-size:12px;
+  line-height:1.65;
+}
+body[data-page="brand"] .brand-v2-mono-row {
+  border-top:1px solid #a1a1a1;
+  padding-top:25px;
+  grid-template-columns:minmax(155px,.8fr) minmax(0,2fr);
+  gap:24px;
+  align-items:center;
+}
+body[data-page="brand"] .brand-v2-mono-caption h4 {font-size:14px; margin-bottom:12px;}
+body[data-page="brand"] .brand-v2-mono {gap:13px;}
+body[data-page="brand"] .brand-v2-placeholder--mono {
+  width:min(100%,145px);
+  aspect-ratio:1.0;
+  background:#e7e7e7;
+  border-radius:0;
+}
+body[data-page="brand"] .brand-v2-placeholder--mono-dark {background:#111;}
+body[data-page="brand"] .brand-v2-mono__item {gap:12px;}
+body[data-page="brand"] .brand-v2-mono__item p {font-size:12px;color:#111;}
+
+/* Four beliefs underneath a centered hairline. */
+body[data-page="brand"] .brand-v2-beliefs {max-width:970px;margin-bottom:110px;}
+body[data-page="brand"] .brand-v2-belief-grid {margin-top:29px;gap:20px;}
+body[data-page="brand"] .brand-v2-belief-grid h3 {font-size:31px;color:#dedede;margin:0 0 10px;}
+body[data-page="brand"] .brand-v2-belief-grid h4 {font-size:14px;margin:0 0 8px;}
+body[data-page="brand"] .brand-v2-belief-grid p {
+  font-family:'Gowun Batang','Noto Serif KR',serif;
+  font-size:12px;
+  color:#454545;
+  line-height:1.7;
+}
+
+/* Framed six-column color guide; the round art slots are deliberately empty. */
+body[data-page="brand"] .brand-v2-color-section {
+  width:min(1110px,calc(100% - 50px));
+  border:1px solid #9b9b9b;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:23px;
+  padding:34px 36px 44px;
+  margin-bottom:90px;
+}
+body[data-page="brand"] .brand-v2-color-section .brand-v2-left-title__label {
+  border:0;
+  padding:11px 0 0;
+  font-size:24px;
+  line-height:1.23;
+}
+body[data-page="brand"] .brand-v2-color-intro {
+  text-align:center;
+  margin:0 0 34px;
+  font-size:12px;
+  font-family:'Gowun Batang','Noto Serif KR',serif;
+  color:#333;
+}
+body[data-page="brand"] .brand-v2-color-grid {grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;}
+body[data-page="brand"] .brand-v2-color-grid .swatch {
+  width:min(54px,90%);
+  margin:0 auto 11px;
+  aspect-ratio:1;
+  border:0;
+  background:transparent!important;
+  border-radius:50%;
+}
+body[data-page="brand"] .brand-v2-color-hex {
+  font-size:12px;
+  color:#111;
+  font-family:'Gowun Batang','Noto Serif KR',serif;
+  margin:0 0 14px;
+  white-space:nowrap;
+}
+body[data-page="brand"] .brand-v2-color-details {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  justify-content:center;
+  gap:6px;
+  font-size:11px;
+  line-height:1.8;
+  color:#444;
+}
+body[data-page="brand"] .brand-v2-color-details > div {min-width:0;}
+body[data-page="brand"] .brand-v2-color-details > div > div {
+  display:flex;
+  justify-content:flex-start;
+  align-items:baseline;
+  gap:4px;
+  white-space:nowrap;
+}
+
+/* Closing message with matching centered separator. */
+body[data-page="brand"] .brand-v2-gift {max-width:1080px;}
+body[data-page="brand"] .brand-v2-gift > p {margin:30px auto 0;max-width:550px;}
+body[data-page="brand"] .brand-v2-gallery {margin-top:95px;}
+
+/* Responsive: original centered hierarchy without illegibly small captions. */
+@media(max-width:1023px) {
+ body[data-page="brand"] .brand-v2-hero,
+ body[data-page="brand"] .brand-v2-hero__inner {height:clamp(340px,50.85vw,520px);}
+ body[data-page="brand"] .brand-v2-intro {padding:65px 0 94px;}
+ body[data-page="brand"] .brand-v2-logo-section,
+ body[data-page="brand"] .brand-v2-color-section {padding:26px 21px 32px;gap:18px;grid-template-columns:34px minmax(0,1fr);}
+ body[data-page="brand"] .brand-v2-logo-grid {gap:16px;}
+ body[data-page="brand"] .brand-v2-logo-card p,
+ body[data-page="brand"] .brand-v2-mono-caption p,
+ body[data-page="brand"] .brand-v2-mono__item p {font-size:11px;}
+ body[data-page="brand"] .brand-v2-color-grid {gap:9px;}
+ body[data-page="brand"] .brand-v2-color-details {font-size:9px;gap:3px;}
+ body[data-page="brand"] .brand-v2-color-hex {font-size:11px;}
+ body[data-page="brand"] .brand-v2-belief-grid h3 {font-size:27px;}
+}
+@media(max-width:767px) {
+ body[data-page="brand"] .brand-v2-hero,
+ body[data-page="brand"] .brand-v2-hero__inner {height:clamp(340px,52vw,400px);}
+ body[data-page="brand"] .brand-v2-hero__logo-placeholder {width:clamp(65px,11vw,86px);}
+ body[data-page="brand"] .brand-v2-hero__copy h1 {font-size:clamp(16px,2.3vw,22px);}
+ body[data-page="brand"] .brand-v2-hero__copy p {font-size:clamp(10px,1.55vw,12px);}
+ body[data-page="brand"] .brand-v2-intro {padding:51px 0 80px;}
+ body[data-page="brand"] .brand-v2-intro h2,
+ body[data-page="brand"] .brand-v2-beliefs h2,
+ body[data-page="brand"] .brand-v2-gift h2 {font-size:17px;}
+ body[data-page="brand"] .brand-v2-intro h2::after,
+ body[data-page="brand"] .brand-v2-beliefs h2::after,
+ body[data-page="brand"] .brand-v2-gift h2::after {height:86px;margin-top:20px;}
+ body[data-page="brand"] .brand-v2-prose {margin-top:23px;max-width:90%;gap:13px;}
+ body[data-page="brand"] .brand-v2-prose p,
+ body[data-page="brand"] .brand-v2-naming p,
+ body[data-page="brand"] .brand-v2-gift > p {font-size:12px;line-height:1.75;}
+ body[data-page="brand"] .brand-v2-naming {padding:58px 0 78px;}
+ body[data-page="brand"] .brand-v2-namepair {gap:32px;margin-bottom:47px;}
+ body[data-page="brand"] .brand-v2-namepair__item strong {font-size:40px;}
+ body[data-page="brand"] .brand-v2-namepair__item span,
+ body[data-page="brand"] .brand-v2-namepair__item em {font-size:11px;}
+ body[data-page="brand"] .brand-v2-naming h3 {font-size:14px;}
+ body[data-page="brand"] .brand-v2-logo-section,
+ body[data-page="brand"] .brand-v2-color-section {width:calc(100% - 22px);padding:18px 12px 22px;gap:12px;grid-template-columns:30px minmax(0,1fr);}
+ body[data-page="brand"] .brand-v2-logo-section .brand-v2-left-title__label,
+ body[data-page="brand"] .brand-v2-color-section .brand-v2-left-title__label {font-size:18px;}
+ body[data-page="brand"] .brand-v2-logo-grid {gap:10px;margin-bottom:22px;}
+ body[data-page="brand"] .brand-v2-placeholder--logo {width:95%;margin-bottom:14px;}
+ body[data-page="brand"] .brand-v2-logo-card h3 {font-size:12px;margin-bottom:4px;}
+ body[data-page="brand"] .brand-v2-logo-card p {font-size:10px;line-height:1.55;}
+ body[data-page="brand"] .brand-v2-mono-row {grid-template-columns:1fr;gap:17px;padding-top:18px;}
+ body[data-page="brand"] .brand-v2-mono-caption h4 {font-size:13px;}
+ body[data-page="brand"] .brand-v2-mono-caption p {font-size:10px;}
+ body[data-page="brand"] .brand-v2-placeholder--mono {width:min(100%,90px);}
+ body[data-page="brand"] .brand-v2-beliefs {margin-bottom:80px;}
+ body[data-page="brand"] .brand-v2-belief-grid {margin-top:23px;gap:12px;}
+ body[data-page="brand"] .brand-v2-belief-grid h3 {font-size:23px;}
+ body[data-page="brand"] .brand-v2-belief-grid h4 {font-size:13px;}
+ body[data-page="brand"] .brand-v2-belief-grid p {font-size:11px;}
+ body[data-page="brand"] .brand-v2-color-intro {font-size:11px;margin-bottom:20px;}
+ body[data-page="brand"] .brand-v2-color-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:19px 10px;}
+ body[data-page="brand"] .brand-v2-color-grid .swatch {width:45px;}
+ body[data-page="brand"] .brand-v2-color-details {font-size:10px;}
+ body[data-page="brand"] .brand-v2-gallery {margin-top:65px;}
+}
+@media(max-width:480px) {
+ body[data-page="brand"] .brand-v2-intro {padding-bottom:60px;}
+ body[data-page="brand"] .brand-v2-prose {max-width:100%;}
+ body[data-page="brand"] .brand-v2-line-break {display:none;}
+ body[data-page="brand"] .brand-v2-naming {padding:35px 0 64px;}
+ body[data-page="brand"] .brand-v2-naming p {max-width:320px;}
+ body[data-page="brand"] .brand-v2-logo-section,
+ body[data-page="brand"] .brand-v2-color-section {grid-template-columns:20px minmax(0,1fr);gap:8px;padding:17px 10px 20px;}
+ body[data-page="brand"] .brand-v2-logo-section .brand-v2-left-title__label,
+ body[data-page="brand"] .brand-v2-color-section .brand-v2-left-title__label {font-size:15px;padding-top:3px;}
+ body[data-page="brand"] .brand-v2-logo-grid {gap:8px;}
+ body[data-page="brand"] .brand-v2-logo-card p {font-size:10px;}
+ body[data-page="brand"] .brand-v2-caption-break {display:none;}
+ body[data-page="brand"] .brand-v2-color-hex {font-size:11px;margin-bottom:9px;}
+ body[data-page="brand"] .brand-v2-color-details {font-size:9px;gap:3px;}
+ body[data-page="brand"] .brand-v2-color-details > div > div {gap:2px;}
+ body[data-page="brand"] .brand-v2-belief-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;}
+ body[data-page="brand"] .brand-v2-gift > p {margin-top:25px;}
+}
+
+/* Final matching adjustments: the reference uses a pure white canvas. */
+body[data-page="brand"] .brand-v2-page {
+  background-color:#fff !important;
+}
+@media (min-width: 501px) and (max-width: 767px) {
+  body[data-page="brand"] .brand-v2-color-grid {
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    gap:6px;
+  }
+  body[data-page="brand"] .brand-v2-color-grid .swatch {width:min(38px,88%);}
+  body[data-page="brand"] .brand-v2-color-hex {font-size:9px;}
+  body[data-page="brand"] .brand-v2-color-details {font-size:8px;gap:2px;}
+  body[data-page="brand"] .brand-v2-color-details > div > div {gap:2px;}
+}
+
+/* =============================================================
+   STORY / BRAND LOGO IMAGES (HAEON_STORY_3)
+   The image FRAMES blend with the existing white story canvas.
+   Only the six logo image slots are targeted: the black hero,
+   copy, colors and overall grid geometry stay untouched.
+   ============================================================= */
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-placeholder {
+  background-color: var(--story-paper, #fff) !important;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+/* Preserve each original frame's dimensions while fitting the entire logo. */
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-placeholder > img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 3%;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* One portrait mark, one long wordmark, one wider symbol. */
+body[data-page="brand"] .brand-v2-logo-card:nth-child(1) .brand-v2-placeholder > img {
+  padding: 2% 9%;
+}
+body[data-page="brand"] .brand-v2-logo-card:nth-child(2) .brand-v2-placeholder > img {
+  padding: 3% 1%;
+}
+body[data-page="brand"] .brand-v2-logo-card:nth-child(3) .brand-v2-placeholder > img {
+  padding: 5% 3%;
+}
+
+/* Monochrome variants fit their existing square frames. */
+body[data-page="brand"] .brand-v2-mono__item .brand-v2-placeholder > img {
+  padding: 4%;
+}
+
+/* White reversed artwork needs contrast; the FRAME remains white,
+   while a black disk belongs to the reverse-logo presentation. */
+body[data-page="brand"] .brand-v2-placeholder--mono-dark::before {
+  content: "";
+  position: absolute;
+  inset: 2%;
+  background: #111;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+body[data-page="brand"] .brand-v2-placeholder--mono-dark > img {
+  padding: 10% !important;
+}
+
+/* =============================================================
+   HAEON STORY — logo frames + typography refinement (2026-10-15)
+   Only brand.html visuals are affected; other pages are unchanged.
+   Gowun Batang Bold = font-family 'Gowun Batang'; font-weight:700.
+   The existing Google Fonts import includes both 400 and 700.
+   ============================================================= */
+
+/* True see-through frames: the page canvas is the background, not
+   a separately painted grey/white block. Preserve the frame geometry. */
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-placeholder {
+  background: transparent !important;
+  border-color: transparent;
+  box-shadow: none;
+}
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-placeholder > img {
+  background: transparent !important;
+  object-fit: contain;
+  object-position: center;
+}
+/* Contrast backing for the reversed WHITE mark is deliberately part
+   of its presentation, not a different background on the frame. */
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-placeholder--mono-dark::before {
+  background: #111;
+}
+
+/* Selective editorial emphasis. Do NOT bold running paragraphs,
+   color codes, navigation labels or the two large naming characters. */
+body[data-page="brand"] .brand-v2-hero__copy h1,
+body[data-page="brand"] .brand-v2-intro h2,
+body[data-page="brand"] .brand-v2-beliefs h2,
+body[data-page="brand"] .brand-v2-gift h2,
+body[data-page="brand"] .brand-v2-naming h3,
+body[data-page="brand"] .brand-v2-logo-section .brand-v2-left-title__label,
+body[data-page="brand"] .brand-v2-color-section .brand-v2-left-title__label,
+body[data-page="brand"] .brand-v2-logo-card h3,
+body[data-page="brand"] .brand-v2-mono-caption h4,
+body[data-page="brand"] .brand-v2-belief-grid h4 {
+  font-family: 'Gowun Batang', 'Noto Serif KR', serif;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   HAEON BRAND — Brand-color symbol circles (2026-10-15)
+   Each transparent SVG rests directly on the STORY page's
+   white canvas. Preserve all 6 original circle dimensions,
+   contents, and the already-applied Gowun Batang Bold rules.
+   ========================================================= */
+body[data-page="brand"] .brand-v2-color-section .brand-v2-color-grid .swatch {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+body[data-page="brand"] .brand-v2-color-section .brand-v2-color-grid .swatch > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
+}
+
+/* =============================================================
+   STORY — title hero logo frame and image fit
+   Keeps the original hero grid and mobile positioning unchanged.
+   ============================================================= */
+body[data-page="brand"] .brand-v2-hero__logo-placeholder {
+  background: #050505; /* match .brand-v2-hero background exactly */
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body[data-page="brand"] .brand-v2-hero__logo-placeholder > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+
+/* ================================================================
+   STORY ART DIRECTED HERO + GALLERY
+   Source artworks already exist in assets/images/. Keep the rest of
+   the STORY text and the other pages completely unchanged.
+   ================================================================ */
+body[data-page="brand"] .brand-v2-hero {
+  background-color: #000;
+  background-image: url("../assets/images/story/CI%20_%20visual.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Remove the hard black square behind the transparent white logo:
+   the decorative background must continue behind the mark. */
+body[data-page="brand"] .brand-v2-hero__logo-placeholder {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+body[data-page="brand"] .brand-v2-hero__logo-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Matching the reference mosaic: full-height left and middle columns,
+   two unequal right-hand rows (top 1/3, bottom 2/3). */
+body[data-page="brand"] .brand-v2-gallery {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr .95fr;
+  grid-template-rows: 1fr 2fr;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 457;
+  gap: clamp(4px, .55vw, 7px);
+  overflow: hidden;
+}
+body[data-page="brand"] .brand-v2-gallery__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+}
+body[data-page="brand"] .brand-v2-gallery__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+body[data-page="brand"] .brand-v2-gallery__item--1 {grid-column: 1;grid-row: 1 / -1;}
+body[data-page="brand"] .brand-v2-gallery__item--2 {grid-column: 2;grid-row: 1 / -1;}
+body[data-page="brand"] .brand-v2-gallery__item--3 {grid-column: 3;grid-row: 1;}
+body[data-page="brand"] .brand-v2-gallery__item--4 {grid-column: 3;grid-row: 2;}
+
+/* Narrow screens retain all four photographs at readable sizes. */
+@media (max-width: 560px) {
+  body[data-page="brand"] .brand-v2-hero {
+    background-position: center center;
+  }
+  body[data-page="brand"] .brand-v2-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .86fr);
+    aspect-ratio: 1 / 1.44;
+    height: auto;
+    gap: 4px;
+  }
+  body[data-page="brand"] .brand-v2-gallery__item--1 {grid-column: 1;grid-row: 1 / 3;}
+  body[data-page="brand"] .brand-v2-gallery__item--2 {grid-column: 2;grid-row: 1 / 3;}
+  body[data-page="brand"] .brand-v2-gallery__item--3 {grid-column: 1;grid-row: 3;}
+  body[data-page="brand"] .brand-v2-gallery__item--4 {grid-column: 2;grid-row: 3;}
+}
+
+
+/* 2026-10-16 — STORY detail title layout unified to 1920 × 1080. */
+body[data-page="brand"] .brand-v2-hero{min-height:0;height:auto;aspect-ratio:1920 / 1080;}
+body[data-page="brand"] .brand-v2-hero__inner{height:100%;}
+@media (max-width:767px){body[data-page="brand"] .brand-v2-hero{aspect-ratio:16 / 9;min-height:320px;}}
+
+/* Mobile QA: prevent aspect-ratio + min-height from widening the hero. */
+@media(max-width:767px){
+ body[data-page="brand"] .brand-v2-hero{width:100%;min-width:0;height:320px;min-height:0;aspect-ratio:auto}
+ body[data-page="brand"] .brand-v2-hero__inner{width:100%;height:100%;min-height:0}
+ body[data-page="brand"] .brand-v2-hero__copy{left:50%;width:calc(100% - 40px);overflow-wrap:anywhere}
+ body[data-page="brand"] .brand-v2-hero__logo-placeholder{left:50%}
+}

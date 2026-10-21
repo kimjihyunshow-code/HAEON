@@ -1,0 +1,316 @@
+/* STORY MAIN — separate landing page, without changing existing brand-v2 styles.
+   The old brand.html is preserved as brand-detail.html. */
+body[data-page="brand-landing"] {
+  background: #fff;
+  color: #191919;
+  font-family: 'Gowun Dodum','Noto Sans KR',sans-serif;
+  overflow-x: clip;
+}
+body[data-page="brand-landing"] .story-landing h2,
+body[data-page="brand-landing"] .story-landing h3 {
+  font-family:'Gowun Batang','Noto Serif KR',serif;
+  font-weight:700;
+  word-break:keep-all;
+}
+body[data-page="brand-landing"] .story-landing p {word-break:keep-all;}
+body[data-page="brand-landing"] .story-landing {
+  padding-top:var(--header-height);
+  overflow:hidden;
+}
+/* Keep the artwork unobstructed and preserve its supplied aspect ratio. */
+body[data-page="brand-landing"] .story-landing__cover {
+  background:#06253d;
+  width:100%;
+  line-height:0;
+}
+body[data-page="brand-landing"] .story-landing__cover img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1920/1061;
+  object-fit:cover;
+}
+/* Black storytelling canvas — two editorial image positions stay empty. */
+body[data-page="brand-landing"] .story-landing__dark {
+  background:#050505;
+  color:#f8f7f4;
+  padding:clamp(20px,2.6vw,54px) 0 clamp(66px,6.2vw,130px);
+}
+body[data-page="brand-landing"] .story-landing__dark-grid {
+  width:min(74%,1090px);
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  row-gap:clamp(42px,4.5vw,88px);
+}
+body[data-page="brand-landing"] .story-landing__blank {
+  display:block;
+  min-width:0;
+  min-height:0;
+}
+body[data-page="brand-landing"] .story-landing__blank--dark {background:#2a2a2a;}
+body[data-page="brand-landing"] .story-landing__blank--light {background:#d9d9d9;}
+body[data-page="brand-landing"] .story-landing__dark-first {
+  grid-column:1 / span 8;
+  aspect-ratio:4 / 3;
+}
+body[data-page="brand-landing"] .story-landing__dark-copy {
+  grid-column:1 / -1;
+  text-align:center;
+  max-width:600px;
+  margin:auto;
+}
+body[data-page="brand-landing"] .story-landing__dark-copy h2 {
+  font-size:clamp(14px,1.48vw,24px);
+  line-height:1.9;
+  letter-spacing:-.025em;
+  font-weight:400;
+  margin:0 0 clamp(12px,1.6vw,24px);
+}
+body[data-page="brand-landing"] .story-landing__dark-copy p {
+  font-size:clamp(11px,1.07vw,16px);
+  font-weight:300;
+  line-height:1.88;
+  color:rgba(255,255,255,.73);
+}
+body[data-page="brand-landing"] .story-landing__dark-second {
+  grid-column:7 / -1;
+  aspect-ratio:4 / 5;
+}
+/* Grey section: caption top-left, square landscape at lower-right. */
+body[data-page="brand-landing"] .story-landing__breeze {background:#efefef;}
+body[data-page="brand-landing"] .story-landing__breeze-inner {
+  width:min(74%,1090px);
+  margin:0 auto;
+  padding:clamp(42px,4.6vw,84px) 0 clamp(45px,5.2vw,95px);
+  display:flex;
+  flex-direction:column;
+}
+body[data-page="brand-landing"] .story-landing__breeze-copy h2,
+body[data-page="brand-landing"] .story-landing__craft-copy h2 {
+  font-size:clamp(17px,1.65vw,29px);
+  line-height:1.55;
+  margin:0 0 clamp(15px,1.3vw,28px);
+}
+body[data-page="brand-landing"] .story-landing__breeze-copy p,
+body[data-page="brand-landing"] .story-landing__craft-copy p {
+  font-size:clamp(11px,1.02vw,17px);
+  line-height:1.83;
+  color:#343434;
+  letter-spacing:-.018em;
+}
+body[data-page="brand-landing"] .story-landing__breeze-image {
+  width:59%;
+  aspect-ratio: 1.22 / 1;
+  align-self:flex-end;
+  margin-top:clamp(32px,4vw,75px);
+}
+/* White section: left portrait block and right editorial copy. */
+body[data-page="brand-landing"] .story-landing__craft {background:#fff;}
+body[data-page="brand-landing"] .story-landing__craft-inner {
+  width:min(74%,1090px);
+  margin:auto;
+  padding:clamp(44px,5.2vw,95px) 0 clamp(90px,9vw,172px);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(32px,5.4vw,90px);
+  align-items:start;
+}
+body[data-page="brand-landing"] .story-landing__craft-image {aspect-ratio: 4 / 5;}
+body[data-page="brand-landing"] .story-landing__craft-copy {padding-top:0;}
+body[data-page="brand-landing"] .story-landing__craft-copy p + p {margin-top:24px;}
+/* Deliberate link between the visual-story landing and the identity page. */
+body[data-page="brand-landing"] .story-landing__gateway {
+  background:#f7f7f6;
+  padding:clamp(36px,4.8vw,72px) 0 clamp(90px,9vw,165px);
+  border-top:1px solid #e2e2e2;
+}
+body[data-page="brand-landing"] .story-landing__gateway-inner {
+  width:min(74%,1090px);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:38px;
+}
+body[data-page="brand-landing"] .story-landing__gateway-eyebrow {
+  color:#5b7485;
+  font:500 11px/1.5 'Cormorant Garamond',Georgia,serif;
+  letter-spacing:.2em;
+  margin-bottom:10px;
+}
+body[data-page="brand-landing"] .story-landing__gateway-copy h2 {font-size:clamp(19px,2.1vw,32px);margin:0 0 12px;}
+body[data-page="brand-landing"] .story-landing__gateway-copy>p:last-child {font-size:clamp(12px,1vw,16px);color:#585858;}
+body[data-page="brand-landing"] .story-landing__gateway-link {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  border-bottom:1px solid #154972;
+  min-width:clamp(195px,22vw,310px);
+  padding:16px 2px;
+  font:500 clamp(13px,1.1vw,17px)/1.4 'Gowun Dodum','Noto Sans KR',sans-serif;
+  color:#154972;
+  transition:color .2s ease,border-color .2s ease;
+}
+body[data-page="brand-landing"] .story-landing__gateway-link span {font-size:25px;transition:transform .25s;}
+body[data-page="brand-landing"] .story-landing__gateway-link:hover {color:#5E9AC5;border-color:#5E9AC5;}
+body[data-page="brand-landing"] .story-landing__gateway-link:hover span {transform:translate(4px,-4px);}
+body[data-page="brand-landing"] .story-landing__gateway-link:focus-visible,
+body[data-page="brand"] .brand-v2-return:focus-visible {outline:2px solid #DFB26F;outline-offset:5px;}
+/* Detail page return control, without altering its existing layout. */
+body[data-page="brand"] .brand-v2-return {
+  position:absolute;
+  top:calc(var(--header-height) + 22px);
+  left:clamp(22px,4.2vw,70px);
+  z-index:3;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,.58);
+  color:#fff;
+  font-size:clamp(11px,.9vw,14px);
+  letter-spacing:.14em;
+  line-height:1.6;
+}
+body[data-page="brand"] .brand-v2-return span {font-size:19px;vertical-align:-1px;padding-right:6px;}
+@media(max-width:767px){
+  body[data-page="brand-landing"] .story-landing__dark-grid,
+  body[data-page="brand-landing"] .story-landing__breeze-inner,
+  body[data-page="brand-landing"] .story-landing__craft-inner,
+  body[data-page="brand-landing"] .story-landing__gateway-inner {width:74%;}
+  body[data-page="brand-landing"] .story-landing__dark-copy h2 {font-size:clamp(12px,2.2vw,16px);}
+  body[data-page="brand-landing"] .story-landing__dark-copy p {font-size:clamp(10px,1.7vw,13px);}
+  body[data-page="brand-landing"] .story-landing__breeze-copy p,
+  body[data-page="brand-landing"] .story-landing__craft-copy p {font-size:clamp(10px,1.7vw,13px);}
+  body[data-page="brand-landing"] .story-landing__breeze-copy h2,
+  body[data-page="brand-landing"] .story-landing__craft-copy h2 {font-size:clamp(17px,2.65vw,22px);}
+  body[data-page="brand-landing"] .story-landing__craft-inner {gap:clamp(20px,5vw,40px);}
+}
+@media(max-width:520px){
+  body[data-page="brand-landing"] .story-landing__dark-grid,
+  body[data-page="brand-landing"] .story-landing__breeze-inner,
+  body[data-page="brand-landing"] .story-landing__craft-inner,
+  body[data-page="brand-landing"] .story-landing__gateway-inner {width:calc(100% - 48px);}
+  body[data-page="brand-landing"] .story-landing__cover img {min-height:245px;object-fit:cover;}
+  body[data-page="brand-landing"] .story-landing__dark {padding-block:32px 75px;}
+  body[data-page="brand-landing"] .story-landing__dark-grid {row-gap:43px;}
+  body[data-page="brand-landing"] .story-landing__dark-first {grid-column:1 / span 10;}
+  body[data-page="brand-landing"] .story-landing__dark-second {grid-column:6 / -1;}
+  body[data-page="brand-landing"] .story-landing__dark-copy {padding:0 4px;}
+  body[data-page="brand-landing"] .story-landing__dark-copy h2 {font-size:clamp(13px,3.7vw,16px);}
+  body[data-page="brand-landing"] .story-landing__dark-copy p {font-size:clamp(11px,2.6vw,13px);}
+  body[data-page="brand-landing"] .story-landing__dark-copy br {display:none;}
+  body[data-page="brand-landing"] .story-landing__breeze-inner {padding-block:49px 58px;}
+  body[data-page="brand-landing"] .story-landing__breeze-image {width:80%;margin-top:43px;}
+  body[data-page="brand-landing"] .story-landing__breeze-copy p,
+  body[data-page="brand-landing"] .story-landing__craft-copy p {font-size:12px;}
+  body[data-page="brand-landing"] .story-landing__breeze-copy p br,
+  body[data-page="brand-landing"] .story-landing__craft-copy p br {display:none;}
+  body[data-page="brand-landing"] .story-landing__craft-inner {grid-template-columns:1fr;gap:30px;padding-block:50px 80px;}
+  body[data-page="brand-landing"] .story-landing__craft-copy {grid-row:1;}
+  body[data-page="brand-landing"] .story-landing__craft-image {grid-row:2;width:75%;}
+  body[data-page="brand-landing"] .story-landing__gateway-inner {flex-direction:column;align-items:stretch;gap:20px;}
+  body[data-page="brand-landing"] .story-landing__gateway-link {min-width:0;}
+  body[data-page="brand-landing"] .story-landing__gateway {padding-block:43px 125px;}
+}
+@media(prefers-reduced-motion:reduce){
+  body[data-page="brand-landing"] .story-landing__gateway-link,
+  body[data-page="brand-landing"] .story-landing__gateway-link span {transition:none;}
+}
+
+
+/* HAEON — STORY / IDEAL supplied editorial reference, 2026-10-16. */
+body[data-page="brand-landing"] .story-landing__cover{position:relative;isolation:isolate;}
+body[data-page="brand-landing"] .story-landing__cover img{width:100%;height:auto;aspect-ratio:1920/1061;object-fit:cover;}
+body[data-page="brand-landing"] .story-landing__cover-title{
+  position:absolute;z-index:2;left:50%;top:25%;transform:translateX(-50%);
+  display:flex;justify-content:center;gap:clamp(16px,2vw,39px);
+  color:white;text-shadow:0 2px 13px rgba(0,0,0,.48);
+  font:700 clamp(14px,1.35vw,24px)/1.5 'Gowun Batang',serif;
+  letter-spacing:.36em;
+}
+body[data-page="brand-landing"] .story-landing__cover-title span{writing-mode:vertical-rl;text-orientation:upright;}
+body[data-page="brand-landing"] .story-landing__dark{
+  background-color:#053654;
+  background-image:url('../assets/images/story/STORY_2.png'),url('../assets/images/story/STORY_3.png');
+  background-size:100% 50%,100% 50%;background-position:top center,bottom center;
+  background-repeat:no-repeat;
+  padding:clamp(80px,7vw,140px) 0 clamp(85px,6vw,135px);
+}
+body[data-page="brand-landing"] .story-landing__dark-grid{
+  width:min(74%,1420px);row-gap:clamp(65px,5.2vw,110px);
+}
+body[data-page="brand-landing"] .story-landing__dark-first,
+body[data-page="brand-landing"] .story-landing__dark-second,
+body[data-page="brand-landing"] .story-landing__craft-image{padding:0;margin:0;overflow:hidden;background:transparent;}
+body[data-page="brand-landing"] .story-landing__dark-first{grid-column:1 / span 8;aspect-ratio:1672/1241;}
+body[data-page="brand-landing"] .story-landing__dark-second{grid-column:6 / -1;aspect-ratio:1273/1236;}
+body[data-page="brand-landing"] .story-landing__dark-first img,
+body[data-page="brand-landing"] .story-landing__dark-second img,
+body[data-page="brand-landing"] .story-landing__craft-image img{width:100%;height:100%;display:block;object-fit:cover;}
+body[data-page="brand-landing"] .story-landing__dark-copy{max-width:750px;}
+body[data-page="brand-landing"] .story-landing__dark-copy h2{font-size:clamp(17px,1.4vw,27px);font-weight:400;}
+body[data-page="brand-landing"] .story-landing__dark-copy p{font-size:clamp(12px,.92vw,17px);}
+body[data-page="brand-landing"] .story-landing__breeze{background-color:#c59756;background-image:url('../assets/images/story/STORY_4.png');background-size:cover;background-position:center;}
+body[data-page="brand-landing"] .story-landing__breeze-inner{width:min(74%,1420px);padding:clamp(95px,6vw,125px) 0 clamp(100px,8vw,160px);}
+body[data-page="brand-landing"] .story-landing__breeze-copy h2{font-size:clamp(21px,1.7vw,33px);}
+body[data-page="brand-landing"] .story-landing__breeze-copy p{max-width:850px;}
+body[data-page="brand-landing"] .story-landing__breeze-image{width:60%;aspect-ratio:720/544;align-self:flex-end;margin-top:clamp(90px,7vw,145px);overflow:hidden;}
+body[data-page="brand-landing"] .story-landing__breeze-image video{display:block;width:100%;height:100%;object-fit:cover;}
+body[data-page="brand-landing"] .story-landing__craft{background:#fcf9eb url('../assets/images/story/STORY_5.png') center/cover no-repeat;}
+body[data-page="brand-landing"] .story-landing__craft-inner{width:min(74%,1420px);grid-template-columns:.96fr .93fr;gap:clamp(65px,5.1vw,102px);align-items:start;padding:clamp(125px,10vw,185px) 0 clamp(130px,11vw,210px);}
+body[data-page="brand-landing"] .story-landing__craft-image{aspect-ratio:1122/1402;}
+body[data-page="brand-landing"] .story-landing__craft-copy{padding-top:0;}
+@media(max-width:767px){
+  body[data-page="brand-landing"] .story-landing__dark-grid,
+  body[data-page="brand-landing"] .story-landing__breeze-inner,
+  body[data-page="brand-landing"] .story-landing__craft-inner{width:calc(100% - 44px);}
+  body[data-page="brand-landing"] .story-landing__cover-title{font-size:clamp(12px,2.2vw,18px);}
+  body[data-page="brand-landing"] .story-landing__dark{padding:55px 0 75px;}
+  body[data-page="brand-landing"] .story-landing__dark-grid{row-gap:60px;}
+  body[data-page="brand-landing"] .story-landing__dark-first{grid-column:1 / span 10;}
+  body[data-page="brand-landing"] .story-landing__dark-second{grid-column:6 / -1;}
+  body[data-page="brand-landing"] .story-landing__breeze-inner{padding:70px 0 85px;}
+  body[data-page="brand-landing"] .story-landing__breeze-image{width:75%;margin-top:65px;}
+  body[data-page="brand-landing"] .story-landing__craft-inner{grid-template-columns:1fr 1fr;gap:25px;padding:75px 0 90px;}
+  body[data-page="brand-landing"] .story-landing__craft-image{grid-column:1;grid-row:1;width:100%;}
+  body[data-page="brand-landing"] .story-landing__craft-copy{grid-column:2;grid-row:1;}
+}
+@media(max-width:480px){
+  body[data-page="brand-landing"] .story-landing__dark-grid,
+  body[data-page="brand-landing"] .story-landing__breeze-inner,
+  body[data-page="brand-landing"] .story-landing__craft-inner{width:calc(100% - 38px);}
+  body[data-page="brand-landing"] .story-landing__cover img{min-height:250px;}
+  body[data-page="brand-landing"] .story-landing__dark-grid{row-gap:46px;}
+  body[data-page="brand-landing"] .story-landing__dark-first{grid-column:1 / -2;}
+  body[data-page="brand-landing"] .story-landing__dark-second{grid-column:5 / -1;}
+  body[data-page="brand-landing"] .story-landing__breeze-image{width:88%;}
+  body[data-page="brand-landing"] .story-landing__craft-inner{grid-template-columns:1fr;gap:30px;}
+  body[data-page="brand-landing"] .story-landing__craft-image{grid-row:1;grid-column:1;width:75%;}
+  body[data-page="brand-landing"] .story-landing__craft-copy{grid-row:2;grid-column:1;}
+}
+
+
+/* 2026-10-19 | One seamless image across STORY hero and blue storytelling.
+   The 1920px-wide watercolor pieces have been joined with feathered seams.
+   The background belongs to their *shared wrapper*: no cover/dark break, even on mobile. */
+body[data-page="brand-landing"] .story-landing__blue-scene{
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  background:#053654 url('../assets/images/story/STORY_blue_continuous.png') center top / 100% 100% no-repeat;
+}
+body[data-page="brand-landing"] .story-landing__cover{
+  width:100%;aspect-ratio:1920 / 1061;
+  min-height:0;
+  background:transparent;
+  overflow:hidden;
+}
+body[data-page="brand-landing"] .story-landing__dark{
+  background:transparent;
+  background-image:none;
+  background-color:transparent;
+}
+@media(max-width:520px){
+ body[data-page="brand-landing"] .story-landing__cover{min-height:260px;aspect-ratio:1920 / 1061;}
+ body[data-page="brand-landing"] .story-landing__blue-scene{background-position:center top;background-size:100% 100%;}
+}

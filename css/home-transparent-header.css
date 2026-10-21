@@ -1,0 +1,90 @@
+/* HOME only: overlay the navigation on the opening sea video.
+   All other site pages intentionally retain the original white header.
+   Reference: translucent image-overlay navigation. */
+
+body[data-page="index"] .site-header.minimal-header,
+body[data-page="index"] .site-header.minimal-header.scrolled {
+  background: rgba(20, 34, 47, .16);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+/* Keep the navigation legible on the video; preserve its existing geometry. */
+body[data-page="index"] .site-header.minimal-header .header-nav > a,
+body[data-page="index"] .site-header.minimal-header .header-experience > a,
+body[data-page="index"] .site-header.minimal-header .story-menu__trigger {
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .55);
+}
+body[data-page="index"] .site-header.minimal-header .header-nav > a:hover,
+body[data-page="index"] .site-header.minimal-header .header-experience > a:hover,
+body[data-page="index"] .site-header.minimal-header .story-menu__trigger:hover,
+body[data-page="index"] .site-header.minimal-header .header-nav > a:focus-visible,
+body[data-page="index"] .site-header.minimal-header .header-experience > a:focus-visible,
+body[data-page="index"] .site-header.minimal-header .story-menu__trigger:focus-visible {
+  color: #fff0cf;
+}
+/* Dropdown is still solid, so STORY/CI remain readable over any video frame. */
+body[data-page="index"] .site-header.minimal-header .story-menu__dropdown {
+  background: rgba(255,255,255,.97);
+  color: #1f2529;
+  border-color: rgba(255,255,255,.8);
+}
+body[data-page="index"] .site-header.minimal-header .story-menu__dropdown a { color: #1f2529; text-shadow: none; }
+body[data-page="index"] .site-header.minimal-header .story-menu__dropdown a:hover,
+body[data-page="index"] .site-header.minimal-header .story-menu__dropdown a:focus-visible { color: #154972; }
+
+/* Transparent pill in the same position as the shared header. */
+body[data-page="index"] .site-header.minimal-header .haeon-shop-actions {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.88);
+  box-shadow: none;
+  color: #fff;
+}
+body[data-page="index"] .site-header.minimal-header .haeon-shop-actions a,
+body[data-page="index"] .site-header.minimal-header .haeon-shop-actions button {
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,.35);
+}
+body[data-page="index"] .site-header.minimal-header .haeon-shop-actions a:hover,
+body[data-page="index"] .site-header.minimal-header .haeon-shop-actions button:hover {
+  color: #fff0cf;
+}
+body[data-page="index"] .site-header.minimal-header .haeon-action-icon {
+  filter: brightness(0) invert(1);
+}
+body[data-page="index"] .site-header.minimal-header .haeon-shop-actions__divider {
+  background: rgba(255,255,255,.75);
+}
+
+/* The video begins at the very top of the viewport, behind the fixed header.
+   Retain the mosaic's sticky-over-hero scrolling behaviour. */
+body[data-page="index"] .product-stage {
+  margin-top: 0;
+  top: 0;
+  height: 100svh;
+  min-height: 520px;
+  padding-top: calc(var(--header-height) + 22px);
+}
+@media (max-width: 850px) {
+  body[data-page="index"] .product-stage {
+    min-height: 470px;
+    padding-top: calc(var(--header-height) + 18px);
+  }
+}
+@media (max-width: 480px) {
+  body[data-page="index"] .product-stage {
+    min-height: 440px;
+    padding-top: calc(var(--header-height) + 10px);
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  body[data-page="index"] .site-header.minimal-header,
+  body[data-page="index"] .site-header.minimal-header.scrolled {
+    background: rgba(18,31,44,.70);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
